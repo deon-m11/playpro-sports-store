@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="title desc">
+  <title id="title">PlayPro Elite Football</title>
+  <desc id="desc">Abstract red and dark football graphic placeholder</desc>
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff1c32"/>
+      <stop offset="100%" stop-color="#8b0d1e"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="#0a0a0a"/>
+  <ellipse cx="320" cy="200" rx="250" ry="140" fill="url(#g)" stroke="#fff" stroke-opacity="0.12" stroke-width="6"/>
+  <path d="M140 200c60-40 160-40 220 0 60 40 160 40 220 0" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="10" stroke-linecap="round"/>
+  <path d="M200 180h120m40 40h120" stroke="#fff" stroke-opacity="0.28" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="320" cy="200" r="46" fill="#0a0a0a" stroke="#fff" stroke-opacity="0.4" stroke-width="6"/>
+  <text x="50%" y="50%" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700" text-anchor="middle" dominant-baseline="middle">PlayPro Elite Football</text>
+</svg>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,6 +19,9 @@
           <a href="index.html" class="nav-link active">Home</a>
           <a href="about.html" class="nav-link">About</a>
           <a href="contact.html" class="nav-link">Contact</a>
+          <a href="cart.html" class="nav-link cart-link">
+            Cart<span class="cart-count-badge" id="cartCountHeader"></span>
+          </a>
         </nav>
         <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
           <span></span>
@@ -56,15 +60,11 @@
         </div>
 
         <div class="product-grid">
-          <!-- Product Card 1 -->
+          <!-- Football Products -->
           <article class="product-card">
-            <a
-              href="https://via.placeholder.com/600x400?text=PlayPro+Elite+Football"
-              target="_blank"
-              class="product-image-wrapper"
-            >
+            <a href="images/elite-football.svg" target="_blank" class="product-image-wrapper">
               <img
-                src="https://via.placeholder.com/400x260?text=Elite+Football"
+                src="images/elite-football.svg"
                 alt="PlayPro Elite Football"
                 class="product-image"
               />
@@ -76,21 +76,48 @@
                 Match‑ready football engineered for performance, control, and
                 durability in all weather conditions.
               </p>
-              <button class="btn btn-outline add-to-cart-btn" data-product="PlayPro Elite Football">
+              <button
+                class="btn btn-outline add-to-cart-btn"
+                data-product="PlayPro Elite Football"
+                data-price="59.99"
+                data-category="Football"
+              >
                 Add to Cart
               </button>
             </div>
           </article>
 
-          <!-- Product Card 2 -->
           <article class="product-card">
-            <a
-              href="https://via.placeholder.com/600x400?text=PlayPro+Hoops+Basketball"
-              target="_blank"
-              class="product-image-wrapper"
-            >
+            <a href="images/elite-football.svg" target="_blank" class="product-image-wrapper">
               <img
-                src="https://via.placeholder.com/400x260?text=Hoops+Basketball"
+                src="images/elite-football.svg"
+                alt="PlayPro Street Football"
+                class="product-image"
+              />
+            </a>
+            <div class="product-body">
+              <h3>PlayPro Street Football</h3>
+              <p class="product-price">$39.99</p>
+              <p class="product-copy">
+                Durable street football with reinforced panels designed for hard
+                ground and urban pitches.
+              </p>
+              <button
+                class="btn btn-outline add-to-cart-btn"
+                data-product="PlayPro Street Football"
+                data-price="39.99"
+                data-category="Football"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- Basketball Products -->
+          <article class="product-card">
+            <a href="images/hoops-basketball.svg" target="_blank" class="product-image-wrapper">
+              <img
+                src="images/hoops-basketball.svg"
                 alt="PlayPro Hoops Basketball"
                 class="product-image"
               />
@@ -102,7 +129,91 @@
                 Indoor/outdoor composite leather basketball with deep channels
                 for ultimate grip and control.
               </p>
-              <button class="btn btn-outline add-to-cart-btn" data-product="PlayPro Hoops Basketball">
+              <button
+                class="btn btn-outline add-to-cart-btn"
+                data-product="PlayPro Hoops Basketball"
+                data-price="49.99"
+                data-category="Basketball"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <a href="images/hoops-basketball.svg" target="_blank" class="product-image-wrapper">
+              <img
+                src="images/hoops-basketball.svg"
+                alt="PlayPro Grip Trainer Basketball"
+                class="product-image"
+              />
+            </a>
+            <div class="product-body">
+              <h3>PlayPro Grip Trainer Basketball</h3>
+              <p class="product-price">$44.99</p>
+              <p class="product-copy">
+                Training ball with enhanced grip pattern to help you perfect
+                handles, passing, and shooting form.
+              </p>
+              <button
+                class="btn btn-outline add-to-cart-btn"
+                data-product="PlayPro Grip Trainer Basketball"
+                data-price="44.99"
+                data-category="Basketball"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <!-- Cricket Products -->
+          <article class="product-card">
+            <a href="images/elite-football.svg" target="_blank" class="product-image-wrapper">
+              <img
+                src="images/elite-football.svg"
+                alt="PlayPro PowerDrive Cricket Bat"
+                class="product-image"
+              />
+            </a>
+            <div class="product-body">
+              <h3>PlayPro PowerDrive Cricket Bat</h3>
+              <p class="product-price">$119.99</p>
+              <p class="product-copy">
+                Grade‑A willow bat with balanced pickup and a responsive sweet
+                spot for powerful stroke play.
+              </p>
+              <button
+                class="btn btn-outline add-to-cart-btn"
+                data-product="PlayPro PowerDrive Cricket Bat"
+                data-price="119.99"
+                data-category="Cricket"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <a href="images/hoops-basketball.svg" target="_blank" class="product-image-wrapper">
+              <img
+                src="images/hoops-basketball.svg"
+                alt="PlayPro ProGuard Cricket Kit"
+                class="product-image"
+              />
+            </a>
+            <div class="product-body">
+              <h3>PlayPro ProGuard Cricket Kit</h3>
+              <p class="product-price">$159.99</p>
+              <p class="product-copy">
+                Complete kit including pads, helmet, gloves, and guard, ideal
+                for club and academy players.
+              </p>
+              <button
+                class="btn btn-outline add-to-cart-btn"
+                data-product="PlayPro ProGuard Cricket Kit"
+                data-price="159.99"
+                data-category="Cricket"
+              >
                 Add to Cart
               </button>
             </div>

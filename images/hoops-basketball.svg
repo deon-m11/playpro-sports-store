@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="title desc">
+  <title id="title">PlayPro Hoops Basketball</title>
+  <desc id="desc">Abstract red and dark basketball graphic placeholder</desc>
+  <defs>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff5b5b"/>
+      <stop offset="100%" stop-color="#a11124"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="#0a0a0a"/>
+  <circle cx="320" cy="200" r="150" fill="url(#g2)" stroke="#fff" stroke-opacity="0.12" stroke-width="8"/>
+  <path d="M170 200h300M320 50v300M230 90c90 80 90 140 0 220M410 90c-90 80-90 140 0 220" stroke="#fff" stroke-opacity="0.2" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <text x="50%" y="50%" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle" dominant-baseline="middle">PlayPro Hoops Basketball</text>
+</svg>

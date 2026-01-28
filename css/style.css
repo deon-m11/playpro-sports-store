@@ -467,6 +467,130 @@ a {
   width: 100%;
 }
 
+/* Cart */
+.cart-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.cart-count-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 999px;
+  background: #ff1c32;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-left: 0.15rem;
+  padding: 0 0.3rem;
+}
+
+.cart-count-badge:empty {
+  display: none;
+}
+
+.cart-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 1.5fr);
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.cart-table-wrapper {
+  background: #101010;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  overflow-x: auto;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.cart-table th,
+.cart-table td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.cart-table th {
+  text-align: left;
+  font-weight: 600;
+  color: #f1f1f1;
+  background: #151515;
+}
+
+.cart-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.cart-col-center {
+  text-align: center;
+}
+
+.cart-col-right {
+  text-align: right;
+}
+
+.cart-qty-input {
+  width: 3rem;
+  text-align: center;
+  padding: 0.35rem 0.4rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #050505;
+  color: #ffffff;
+}
+
+.cart-remove-btn {
+  background: transparent;
+  border: none;
+  color: #ff8080;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.cart-summary {
+  background: #101010;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 1.5rem 1.75rem 1.75rem;
+}
+
+.cart-summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  color: #dddddd;
+}
+
+.cart-summary-total {
+  margin-top: 0.75rem;
+  font-weight: 700;
+}
+
+.cart-note {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: #bfbfbf;
+}
+
+.cart-empty-message {
+  text-align: center;
+  color: #d3d3d3;
+}
+
+.cart-empty-message a {
+  color: #ff5b5b;
+  text-decoration: underline;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .hero-content {
@@ -478,7 +602,8 @@ a {
   }
 
   .split,
-  .contact-layout {
+  .contact-layout,
+  .cart-wrapper {
     grid-template-columns: minmax(0, 1fr);
   }
 }
