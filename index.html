@@ -1,281 +1,82 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PlayPro Sports Store | Home</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <!-- Header / Navigation -->
-    <header class="site-header">
-      <div class="container nav-container">
-        <div class="logo">
-          <span class="logo-accent">Play</span>Pro
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PlayPro Sports Store</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-container">
+    <div class="logo"><span class="logo-accent">Play</span>Pro</div>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-content">
+    <div>
+      <h1>Gear Up.<br/>Game On.</h1>
+      <p>Premium sports equipment designed with Apple‑level precision and Nike‑style performance.</p>
+      <a href="#featured" class="btn btn-primary">Shop Now</a>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b"/>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="featured">
+  <div class="container">
+    <div class="section-header">
+      <h2>Featured Gear</h2>
+      <p>Built for athletes. Designed to win.</p>
+    </div>
+
+    <div class="product-grid">
+      <article class="product-card">
+        <img class="product-image" src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d"/>
+        <div class="product-body">
+          <h3>Elite Football</h3>
+          <p class="product-price">$59.99</p>
+          <a class="btn btn-outline">Add to Cart</a>
         </div>
-        <nav class="main-nav" id="mainNav">
-          <a href="index.html" class="nav-link active">Home</a>
-          <a href="about.html" class="nav-link">About</a>
-          <a href="contact.html" class="nav-link">Contact</a>
-          <a href="cart.html" class="nav-link cart-link">
-            Cart<span class="cart-count-badge" id="cartCountHeader"></span>
-          </a>
-        </nav>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </header>
+      </article>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="container hero-content">
-        <div class="hero-text">
-          <h1>Gear Up. Game On.</h1>
-          <p>
-            Welcome to <strong>PlayPro Sports Store</strong> – your one‑stop
-            shop for premium sports equipment, apparel, and accessories.
-          </p>
-          <a href="#featured" class="btn btn-primary">Shop Now</a>
+      <article class="product-card">
+        <img class="product-image" src="https://images.unsplash.com/photo-1546519638-68e109498ffc"/>
+        <div class="product-body">
+          <h3>Pro Basketball</h3>
+          <p class="product-price">$49.99</p>
+          <a class="btn btn-outline">Add to Cart</a>
         </div>
-        <div class="hero-image">
-          <div class="hero-card">
-            <h2>Season Highlights</h2>
-            <p>Exclusive deals on football, basketball, and fitness gear.</p>
-          </div>
+      </article>
+
+      <article class="product-card">
+        <img class="product-image" src="https://images.unsplash.com/photo-1599058917212-d750089bc07c"/>
+        <div class="product-body">
+          <h3>Cricket Bat</h3>
+          <p class="product-price">$119.99</p>
+          <a class="btn btn-outline">Add to Cart</a>
         </div>
-      </div>
-    </section>
+      </article>
+    </div>
+  </div>
+</section>
 
-    <!-- Featured Products -->
-    <section class="section" id="featured">
-      <div class="container">
-        <div class="section-header">
-          <h2>Featured Products</h2>
-          <p>Handpicked gear to elevate your performance on and off the field.</p>
-        </div>
+<footer class="site-footer">
+  <div class="container footer-content">
+    <p>© 2026 PlayPro Sports Store</p>
+  </div>
+</footer>
 
-        <div class="product-grid">
-          <!-- Football Products -->
-          <article class="product-card">
-            <a href="images/playpro-elite-football.png" target="_blank" class="product-image-wrapper">
-              <img
-                src="images/playpro-elite-football.png"
-                alt="PlayPro Elite Football"
-                class="product-image"
-              />
-            </a>
-            <div class="product-body">
-              <h3>PlayPro Elite Football</h3>
-              <p class="product-price">$59.99</p>
-              <p class="product-copy">
-                Match‑ready football engineered for performance, control, and
-                durability in all weather conditions.
-              </p>
-              <button
-                class="btn btn-outline add-to-cart-btn"
-                data-product="PlayPro Elite Football"
-                data-price="59.99"
-                data-category="Football"
-              >
-                Add to Cart
-              </button>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <a href="images/playpro-street-football.png" target="_blank" class="product-image-wrapper">
-              <img
-                src="images/playpro-street-football.png"
-                alt="PlayPro Street Football"
-                class="product-image"
-              />
-            </a>
-            <div class="product-body">
-              <h3>PlayPro Street Football</h3>
-              <p class="product-price">$39.99</p>
-              <p class="product-copy">
-                Durable street football with reinforced panels designed for hard
-                ground and urban pitches.
-              </p>
-              <button
-                class="btn btn-outline add-to-cart-btn"
-                data-product="PlayPro Street Football"
-                data-price="39.99"
-                data-category="Football"
-              >
-                Add to Cart
-              </button>
-            </div>
-          </article>
-
-          <!-- Basketball Products -->
-          <article class="product-card">
-            <a href="images/playpro-hoops-basketball.png" target="_blank" class="product-image-wrapper">
-              <img
-                src="images/playpro-hoops-basketball.png"
-                alt="PlayPro Hoops Basketball"
-                class="product-image"
-              />
-            </a>
-            <div class="product-body">
-              <h3>PlayPro Hoops Basketball</h3>
-              <p class="product-price">$49.99</p>
-              <p class="product-copy">
-                Indoor/outdoor composite leather basketball with deep channels
-                for ultimate grip and control.
-              </p>
-              <button
-                class="btn btn-outline add-to-cart-btn"
-                data-product="PlayPro Hoops Basketball"
-                data-price="49.99"
-                data-category="Basketball"
-              >
-                Add to Cart
-              </button>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <a href="images/playpro-grip-trainer-basketball.png" target="_blank" class="product-image-wrapper">
-              <img
-                src="images/playpro-grip-trainer-basketball.png"
-                alt="PlayPro Grip Trainer Basketball"
-                class="product-image"
-              />
-            </a>
-            <div class="product-body">
-              <h3>PlayPro Grip Trainer Basketball</h3>
-              <p class="product-price">$44.99</p>
-              <p class="product-copy">
-                Training ball with enhanced grip pattern to help you perfect
-                handles, passing, and shooting form.
-              </p>
-              <button
-                class="btn btn-outline add-to-cart-btn"
-                data-product="PlayPro Grip Trainer Basketball"
-                data-price="44.99"
-                data-category="Basketball"
-              >
-                Add to Cart
-              </button>
-            </div>
-          </article>
-
-          <!-- Cricket Products -->
-          <article class="product-card">
-            <a href="images/playpro-powerdrive-cricket-bat.png" target="_blank" class="product-image-wrapper">
-              <img
-                src="images/playpro-powerdrive-cricket-bat.png"
-                alt="PlayPro PowerDrive Cricket Bat"
-                class="product-image"
-              />
-            </a>
-            <div class="product-body">
-              <h3>PlayPro PowerDrive Cricket Bat</h3>
-              <p class="product-price">$119.99</p>
-              <p class="product-copy">
-                Grade‑A willow bat with balanced pickup and a responsive sweet
-                spot for powerful stroke play.
-              </p>
-              <button
-                class="btn btn-outline add-to-cart-btn"
-                data-product="PlayPro PowerDrive Cricket Bat"
-                data-price="119.99"
-                data-category="Cricket"
-              >
-                Add to Cart
-              </button>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <a href="images/playpro-proguard-cricket-kit.png" target="_blank" class="product-image-wrapper">
-              <img
-                src="images/playpro-proguard-cricket-kit.png"
-                alt="PlayPro ProGuard Cricket Kit"
-                class="product-image"
-              />
-            </a>
-            <div class="product-body">
-              <h3>PlayPro ProGuard Cricket Kit</h3>
-              <p class="product-price">$159.99</p>
-              <p class="product-copy">
-                Complete kit including pads, helmet, gloves, and guard, ideal
-                for club and academy players.
-              </p>
-              <button
-                class="btn btn-outline add-to-cart-btn"
-                data-product="PlayPro ProGuard Cricket Kit"
-                data-price="159.99"
-                data-category="Cricket"
-              >
-                Add to Cart
-              </button>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Video Highlights / Social Proof -->
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-header">
-          <h2>Matchday Highlights &amp; Gear in Action</h2>
-          <p>See how athletes train and compete with pro‑level equipment.</p>
-        </div>
-
-        <div class="media-grid">
-          <div class="media-card">
-            <div class="media-video-wrapper">
-              <!-- Replace the YouTube links below with your own sports / product videos -->
-              <iframe
-                src="https://www.youtube.com/embed/Ke90Tje7VS0"
-                title="Training Session Highlights"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <h3>Elite Training Drills</h3>
-            <p>Discover high‑intensity drills to get the most out of your PlayPro gear.</p>
-          </div>
-
-          <div class="media-card">
-            <div class="media-video-wrapper">
-              <iframe
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="PlayPro Matchday Experience"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <h3>Matchday Energy</h3>
-            <p>Feel the stadium atmosphere and see why quality equipment matters.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-      <div class="container footer-content">
-        <p>&copy; <span id="year"></span> PlayPro Sports Store. All rights reserved.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="PlayPro on Facebook">Facebook</a>
-          <a href="#" aria-label="PlayPro on Instagram">Instagram</a>
-          <a href="#" aria-label="PlayPro on Twitter">Twitter</a>
-        </div>
-      </div>
-    </footer>
-
-    <script src="js/script.js"></script>
-  </body>
+</body>
 </html>
-
