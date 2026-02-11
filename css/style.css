@@ -1,4 +1,6 @@
-/* PlayPro Sports Store - Global Styles */
+/* ===============================
+   GLOBAL RESET & BASE
+   =============================== */
 *,
 *::before,
 *::after {
@@ -28,12 +30,18 @@ a {
   text-decoration: none;
 }
 
-/* Layout helpers */
+/* ===============================
+   LAYOUT HELPERS
+   =============================== */
 .container {
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
   padding: 0 1.5rem;
+}
+
+.narrow {
+  max-width: 768px;
 }
 
 .section {
@@ -58,13 +66,15 @@ a {
   color: #bbbbbb;
 }
 
-/* Header & Navigation */
+/* ===============================
+   HEADER & NAVIGATION
+   =============================== */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
   backdrop-filter: blur(10px);
-  background: rgba(5, 5, 5, 0.9);
+  background: rgba(5, 5, 5, 0.92);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -138,7 +148,9 @@ a {
   background: #ffffff;
 }
 
-/* Hero */
+/* ===============================
+   HERO
+   =============================== */
 .hero {
   background: radial-gradient(circle at top left, #ff1c32 0, transparent 55%),
     radial-gradient(circle at bottom right, #3b3b3b 0, #050505 55%);
@@ -169,7 +181,9 @@ a {
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
 }
 
-/* Buttons */
+/* ===============================
+   BUTTONS
+   =============================== */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -182,15 +196,18 @@ a {
   text-transform: uppercase;
   font-size: 0.85rem;
   cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn-primary {
   background: linear-gradient(135deg, #ff1c32, #ff5b5b);
   color: #ffffff;
+  box-shadow: 0 10px 22px rgba(255, 28, 50, 0.5);
 }
 
 .btn-primary:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(255, 28, 50, 0.6);
 }
 
 .btn-outline {
@@ -199,7 +216,9 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Products */
+/* ===============================
+   PRODUCT GRID
+   =============================== */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -214,15 +233,14 @@ a {
   box-shadow: 0 14px 35px rgba(0, 0, 0, 0.55);
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease;
+  transition: transform 0.35s ease;
 }
 
 .product-card:hover {
-  transform: scale(1.03);
+  transform: translateY(-6px);
 }
 
 .product-image {
-  width: 100%;
   height: 230px;
   object-fit: cover;
 }
@@ -236,10 +254,87 @@ a {
   font-weight: 700;
 }
 
-/* Cart */
+/* ===============================
+   CONTACT PAGE – PREMIUM UI
+   =============================== */
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+  gap: 2.5rem;
+}
+
+.contact-form-wrapper,
+.contact-info {
+  background: linear-gradient(145deg, #0d0d0d, #151515);
+  padding: 2.25rem 2.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75);
+}
+
+.contact-form-wrapper h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form-wrapper p {
+  font-size: 0.95rem;
+  color: #d0d0d0;
+  margin-bottom: 1.75rem;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 0.85rem;
+  border-radius: 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: #0b0b0b;
+  color: #ffffff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ff1c32;
+  box-shadow: 0 0 0 1px rgba(255, 28, 50, 0.45);
+  outline: none;
+}
+
+.error-message {
+  font-size: 0.8rem;
+  color: #ff8080;
+}
+
+.form-success {
+  margin-top: 0.75rem;
+  color: #70ffb1;
+  font-weight: 600;
+}
+
+/* Map */
+.map-placeholder {
+  margin-top: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* ===============================
+   CART
+   =============================== */
 .cart-wrapper {
   display: grid;
-  grid-template-columns: 3fr 1.5fr;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 1.5fr);
   gap: 2rem;
 }
 
@@ -270,7 +365,9 @@ a {
   cursor: pointer;
 }
 
-/* Footer */
+/* ===============================
+   FOOTER
+   =============================== */
 .site-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   padding: 1.75rem 0;
@@ -283,10 +380,17 @@ a {
   color: #b9b9b9;
 }
 
-/* Responsive */
+.footer-social a:hover {
+  color: #ff5b5b;
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
 @media (max-width: 900px) {
   .hero-content,
-  .cart-wrapper {
+  .cart-wrapper,
+  .contact-layout {
     grid-template-columns: 1fr;
   }
 }
