@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile | PlayPro Sports Account</title>
+    <meta
+      name="description"
+      content="Manage your PlayPro Sports profile, preferences, loyalty stats, and recent orders in one account dashboard."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="theme-color" content="#ff6a3d" />
+    <meta property="og:site_name" content="PlayPro Sports" />
+    <meta property="og:type" content="website" />
+  </head>
+  <body data-page="profile">
+    <div class="topbar">
+      <div class="container topbar-content">
+        <span>Your account center for stats, preferences, loyalty, and order visibility.</span>
+        <span class="topbar-highlight">PlayPro by Deon Menezes</span>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container nav-container">
+        <a href="index.html" class="logo" aria-label="PlayPro Sports Home"
+          ><span class="logo-accent">Play</span>Pro Sports</a
+        >
+
+        <nav class="main-nav" data-main-nav>
+          <a class="nav-link" data-page-link="home" href="index.html">Home</a>
+          <a class="nav-link" data-page-link="shop" href="shop.html">Shop</a>
+          <a class="nav-link" data-page-link="experience" href="experience.html">Experience</a>
+          <a class="nav-link" data-page-link="about" href="about.html">About</a>
+          <a class="nav-link" data-page-link="contact" href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <form class="site-search" data-site-search role="search" aria-label="Search products">
+            <input type="search" data-site-search-input placeholder="Search gear" aria-label="Search products" />
+            <button type="submit" aria-label="Search catalog">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="M20 20l-3.4-3.4"></path>
+              </svg>
+            </button>
+          </form>
+          <button class="icon-link theme-toggle" data-theme-toggle type="button" aria-label="Switch theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2.5M12 19.5V22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M2 12h2.5M19.5 12H22M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"></path>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M20.2 14.7A8.5 8.5 0 1 1 9.3 3.8a7 7 0 1 0 10.9 10.9z"></path>
+            </svg>
+          </button>
+          <a class="icon-link" href="wishlist.html" aria-label="Wishlist">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 21s-6.716-4.35-9.2-8.281C1.424 10.565 2.052 7.44 4.42 5.82c2.165-1.48 4.773-.915 6.58 1.2 1.807-2.115 4.416-2.68 6.58-1.2 2.368 1.62 2.996 4.745 1.62 6.9C18.716 16.65 12 21 12 21z" />
+            </svg>
+            <span class="icon-badge" data-wishlist-count></span>
+          </a>
+          <a class="icon-link" href="cart.html" aria-label="Cart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="9" cy="20" r="1.5"></circle>
+              <circle cx="17" cy="20" r="1.5"></circle>
+              <path d="M3 4h2l2.4 10.2a1 1 0 0 0 .98.8H18.2a1 1 0 0 0 .98-.8L21 7H7"></path>
+            </svg>
+            <span class="icon-badge" data-cart-count></span>
+          </a>
+          <button class="nav-toggle" data-nav-toggle aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="section-tight">
+      <div class="container">
+        <section class="page-hero reveal">
+          <img
+            src="https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=1900"
+            alt="Athlete account dashboard banner"
+          />
+          <div class="page-hero-body">
+            <div class="breadcrumbs">
+              <a href="index.html">Home</a>
+              <span>/</span>
+              <strong>Profile</strong>
+            </div>
+            <h1>Your PlayPro Profile</h1>
+            <p>Manage account details, training profile preferences, and recent orders in one athlete-ready dashboard.</p>
+          </div>
+        </section>
+
+        <section id="profileGuest" class="auth-card reveal">
+          <p class="section-kicker">Sign In Required</p>
+          <h2 class="section-title auth-title">Access Your Account</h2>
+          <p class="muted" style="margin-bottom: 0.8rem">
+            You are currently signed out. Login to view your account, recent orders, and recommendations.
+          </p>
+          <div class="auth-inline">
+            <button id="profileLoginButton" type="button" class="btn btn-primary">Login</button>
+            <a href="signup.html" class="btn btn-ghost">Create Account</a>
+          </div>
+        </section>
+
+        <section id="profileShell" class="account-shell hidden">
+          <div class="split-layout">
+            <article class="panel-card reveal">
+              <p class="section-kicker">Account Snapshot</p>
+              <div class="account-identity">
+                <h2 id="profileName">Athlete Name</h2>
+                <p id="profileEmail" class="muted">email@example.com</p>
+              </div>
+              <div class="info-grid">
+                <article class="info-card">
+                  <p class="label">Tier</p>
+                  <p class="value" id="profileTier">Starter</p>
+                </article>
+                <article class="info-card">
+                  <p class="label">Wishlist</p>
+                  <p class="value" id="profileWishlistCount">0</p>
+                </article>
+                <article class="info-card">
+                  <p class="label">Cart Items</p>
+                  <p class="value" id="profileCartCount">0</p>
+                </article>
+              </div>
+              <div class="info-grid">
+                <article class="info-card">
+                  <p class="label">Loyalty Points</p>
+                  <p class="value" id="profilePoints">0</p>
+                </article>
+                <article class="info-card">
+                  <p class="label">Quick Access</p>
+                  <p class="value"><a href="wishlist.html">Open Wishlist</a></p>
+                </article>
+                <article class="info-card">
+                  <p class="label">Orders</p>
+                  <p class="value"><a href="track-order.html">Track Orders</a></p>
+                </article>
+              </div>
+              <div class="account-actions">
+                <button id="profileLogoutButton" type="button" class="btn btn-ghost">Logout</button>
+              </div>
+            </article>
+
+            <article class="panel-card reveal">
+              <p class="section-kicker">Profile Settings</p>
+              <h2 class="section-title auth-title">Edit Preferences</h2>
+              <form id="profileForm" class="auth-form" novalidate>
+                <div class="form-grid">
+                  <div class="full">
+                    <label class="filter-label" for="profileFieldName">Full Name</label>
+                    <input id="profileFieldName" name="name" class="form-control" required />
+                  </div>
+                  <div>
+                    <label class="filter-label" for="profileFieldPhone">Phone</label>
+                    <input id="profileFieldPhone" name="phone" class="form-control" />
+                  </div>
+                  <div>
+                    <label class="filter-label" for="profileFieldLocation">Country Code</label>
+                    <input id="profileFieldLocation" name="location" class="form-control" maxlength="3" />
+                  </div>
+                  <div>
+                    <label class="filter-label" for="profileFieldSport">Primary Sport</label>
+                    <select id="profileFieldSport" name="sport" class="form-control">
+                      <option value="Football">Football</option>
+                      <option value="Basketball">Basketball</option>
+                      <option value="Running">Running</option>
+                      <option value="Cricket">Cricket</option>
+                      <option value="Recovery">Recovery</option>
+                      <option value="Training">Training</option>
+                    </select>
+                  </div>
+                  <div class="full">
+                    <label class="filter-label" for="profileFieldGoal">Training Goal</label>
+                    <select id="profileFieldGoal" name="goal" class="form-control">
+                      <option value="Beginner">Beginner Build</option>
+                      <option value="Academy">Academy Track</option>
+                      <option value="Pro-Level">Pro-Level Performance</option>
+                      <option value="Recovery">Recovery & Mobility</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="auth-inline">
+                  <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+                <p id="profileResult" class="auth-result" aria-live="polite"></p>
+              </form>
+            </article>
+          </div>
+
+          <article class="panel-card reveal">
+            <p class="section-kicker">Recent Orders</p>
+            <h2 class="section-title auth-title">Order History</h2>
+            <div id="profileOrders" class="orders-grid"></div>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><span class="logo-accent">Play</span>Pro Sports</a>
+          <p>Your personalized sports equipment account, optimized for performance shopping.</p>
+          <p class="founder-note">Created and founded by Deon Menezes.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Account</h4>
+          <ul class="footer-links">
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="rewards.html">Rewards</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Orders</h4>
+          <ul class="footer-links">
+            <li><a href="track-order.html">Track Order</a></li>
+            <li><a href="returns.html">Returns</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="experience.html">X Lab</a></li>
+            <li><a href="resources.html">Training Hub</a></li>
+            <li><a href="contact.html">Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span>&copy; <span data-year></span> PlayPro Sports Store. All rights reserved.</span>
+        <span>Your account. Your performance edge.</span>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

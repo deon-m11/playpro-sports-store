@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cart | PlayPro Sports</title>
+    <title>Resources | PlayPro X Lab</title>
     <meta
       name="description"
-      content="Review your selected sports equipment, apply offers, and proceed to secure checkout."
+      content="Training guides, buying advice, and recommendation tools for athletes."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,11 +21,11 @@
     <meta property="og:site_name" content="PlayPro Sports" />
     <meta property="og:type" content="website" />
   </head>
-  <body data-page="cart">
+  <body data-page="experience">
     <div class="topbar">
       <div class="container topbar-content">
-        <span>Cart protected with secure local checkout workflow.</span>
-        <span class="topbar-highlight">PlayPro Founder: Deon Menezes</span>
+        <span>PlayPro X Lab • High-conversion commerce systems • Athlete-grade UX</span>
+        <span class="topbar-highlight">Built under founder Deon Menezes</span>
       </div>
     </div>
 
@@ -40,14 +40,12 @@
           <a class="nav-link" data-page-link="shop" href="shop.html">Shop</a>
           <a class="nav-link" data-page-link="experience" href="experience.html">Experience</a>
           <a class="nav-link" data-page-link="about" href="about.html">About</a>
-          <a class="nav-link" data-page-link="contact" href="contact.html"
-            >Contact</a
-          >
+          <a class="nav-link" data-page-link="contact" href="contact.html">Contact</a>
         </nav>
 
         <div class="nav-actions">
           <form class="site-search" data-site-search role="search" aria-label="Search products">
-            <input type="search" data-site-search-input placeholder="Search gear" aria-label="Search products">
+            <input type="search" data-site-search-input placeholder="Search gear" aria-label="Search products" />
             <button type="submit" aria-label="Search catalog">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                 <circle cx="11" cy="11" r="7"></circle>
@@ -88,137 +86,90 @@
     <main class="section-tight">
       <div class="container">
         <section class="page-hero reveal">
-          <img
-            src="https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg?auto=compress&cs=tinysrgb&w=1900"
-            alt="Athlete equipment shopping"
-          />
+          <img src="https://images.pexels.com/photos/1456706/pexels-photo-1456706.jpeg?auto=compress&cs=tinysrgb&w=1900" alt="Training resources" />
           <div class="page-hero-body">
-            <div class="breadcrumbs">
-              <a href="index.html">Home</a>
-              <span>/</span>
-              <strong>Cart</strong>
-            </div>
-            <h1>Your Performance Cart</h1>
-            <p>
-              Review your selected gear, apply promo codes, and lock in your
-              order before checkout.
-            </p>
+            <div class="breadcrumbs"><a href="experience.html">Experience</a><span>/</span><strong>Resources</strong></div>
+            <h1>Training Academy & Guides</h1>
+            <p>Learn what to buy, how to train, and how to maximize equipment performance.</p>
           </div>
         </section>
 
-        <section class="cart-layout">
-          <div>
-            <div id="cartEmpty" class="empty-state reveal">
-              Your cart is empty. Explore premium equipment from the
-              <a href="shop.html">shop catalog</a>.
-            </div>
-
-            <div id="cartContent" class="hidden">
-              <div class="cart-list" id="cartList"></div>
-            </div>
+        <section class="section-tight">
+          <div class="split-layout">
+            <article class="panel-card reveal">
+              <p class="section-kicker">Gear Recommendation Quiz</p>
+              <form class="tool-form" data-quiz-form>
+                <select class="form-control" name="sport" required>
+                  <option value="">Choose your sport</option>
+                  <option>Football</option>
+                  <option>Basketball</option>
+                  <option>Running</option>
+                  <option>Cricket</option>
+                </select>
+                <select class="form-control" name="level" required>
+                  <option value="">Skill level</option>
+                  <option>Beginner</option>
+                  <option>Intermediate</option>
+                  <option>Advanced</option>
+                </select>
+                <button class="btn btn-primary" type="submit">Get Recommended Setup</button>
+              </form>
+              <div class="tool-result" id="quizResult">Your personalized gear path appears here.</div>
+            </article>
+            <article class="panel-card reveal">
+              <p class="section-kicker">Playbooks</p>
+              <div class="stack-grid">
+                <article class="experience-card"><h3>Football Matchday Checklist</h3><p>Boot, ball, shin guards, hydration setup.</p></article>
+                <article class="experience-card"><h3>Basketball Jump Training Stack</h3><p>Court gear + strength + recovery flow.</p></article>
+                <article class="experience-card"><h3>Runner Recovery System</h3><p>Wearables, hydration, mobility, tissue care.</p></article>
+              </div>
+            </article>
           </div>
-
-          <aside class="cart-summary reveal">
-            <h2 class="summary-title">Order Summary</h2>
-
-            <label class="filter-label" for="shippingSelect">Shipping Speed</label>
-            <select id="shippingSelect" class="filter-control">
-              <option value="standard">Standard (Free over $180 / $8)</option>
-              <option value="express">Express (2-day / $22)</option>
-            </select>
-
-            <div class="promo-row">
-              <input
-                id="promoCode"
-                type="text"
-                placeholder="Promo code (try PLAYPRO10)"
-              />
-              <button class="btn btn-secondary btn-small" id="promoApply" type="button">
-                Apply
-              </button>
-            </div>
-
-            <div class="summary-row">
-              <span>Subtotal</span>
-              <strong id="summarySubtotal">$0.00</strong>
-            </div>
-            <div class="summary-row">
-              <span>Shipping</span>
-              <strong id="summaryShipping">$0.00</strong>
-            </div>
-            <div class="summary-row">
-              <span>Discount</span>
-              <strong id="summaryDiscount">$0.00</strong>
-            </div>
-            <div class="summary-row">
-              <span>Tax</span>
-              <strong id="summaryTax">$0.00</strong>
-            </div>
-            <div class="summary-row total">
-              <span>Total</span>
-              <strong id="summaryTotal">$0.00</strong>
-            </div>
-
-            <button id="clearCartButton" class="btn btn-ghost btn-block" type="button">
-              Clear Cart
-            </button>
-            <a id="checkoutLink" href="checkout.html" class="btn btn-primary btn-block">
-              Proceed to Checkout
-            </a>
-
-            <p class="summary-note">
-              All transactions are demo-safe in this build. No live payment is
-              processed.
-            </p>
-          </aside>
         </section>
       </div>
     </main>
-
     <footer class="site-footer">
       <div class="container footer-main">
         <div class="footer-brand">
-          <a href="index.html" class="logo"
-            ><span class="logo-accent">Play</span>Pro Sports</a
-          >
-          <p>Sport-specific equipment engineered for real-world competition.</p>
+          <a href="index.html" class="logo"><span class="logo-accent">Play</span>Pro Sports</a>
+          <p>PlayPro X Lab powers the next generation of athlete-first sports commerce.</p>
           <p class="founder-note">Created and founded by Deon Menezes.</p>
         </div>
 
         <div class="footer-col">
-          <h4>Store</h4>
+          <h4>Experience</h4>
           <ul class="footer-links">
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="wishlist.html">Wishlist</a></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="bundles.html">Bundles</a></li>
+            <li><a href="drops.html">Drops</a></li>
+            <li><a href="rewards.html">Rewards</a></li>
+            <li><a href="trust.html">Trust Center</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Company</h4>
+          <h4>Operations</h4>
           <ul class="footer-links">
-            <li><a href="about.html">About</a></li>
+            <li><a href="track-order.html">Track Order</a></li>
+            <li><a href="returns.html">Returns</a></li>
+            <li><a href="team-orders.html">Team Orders</a></li>
+            <li><a href="gift-cards.html">Gift Cards</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Growth</h4>
+          <ul class="footer-links">
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="partnerships.html">Partnerships</a></li>
+            <li><a href="press.html">Press</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="contact.html">Policies</a></li>
-            <li><a href="contact.html">Support</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Help</h4>
-          <ul class="footer-links">
-            <li><a href="contact.html">Shipping Questions</a></li>
-            <li><a href="contact.html">Returns</a></li>
-            <li><a href="contact.html">Bulk Orders</a></li>
-            <li><a href="contact.html">Account Support</a></li>
           </ul>
         </div>
       </div>
 
       <div class="container footer-bottom">
         <span>&copy; <span data-year></span> PlayPro Sports Store. All rights reserved.</span>
-        <span>Secure cart experience optimized for speed.</span>
+        <span>X Lab: precision UX for conversion and retention.</span>
       </div>
     </footer>
 

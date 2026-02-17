@@ -1,0 +1,45 @@
+{
+  "name": "PlayPro Sports Store",
+  "short_name": "PlayPro",
+  "description": "Elite sports equipment commerce platform founded by Deon Menezes.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#050b19",
+  "theme_color": "#ff6a3d",
+  "shortcuts": [
+    {
+      "name": "Shop Catalog",
+      "short_name": "Shop",
+      "url": "/shop.html"
+    },
+    {
+      "name": "Live Drops",
+      "short_name": "Drops",
+      "url": "/drops.html"
+    },
+    {
+      "name": "Dashboard",
+      "short_name": "Dashboard",
+      "url": "/dashboard.html"
+    },
+    {
+      "name": "My Profile",
+      "short_name": "Profile",
+      "url": "/profile.html"
+    }
+  ],
+  "icons": [
+    {
+      "src": "images/elite-football.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "images/hoops-basketball.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

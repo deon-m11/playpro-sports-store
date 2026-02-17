@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cart | PlayPro Sports</title>
+    <title>Shop | PlayPro Sports Equipment</title>
     <meta
       name="description"
-      content="Review your selected sports equipment, apply offers, and proceed to secure checkout."
+      content="Explore the complete PlayPro Sports equipment catalog with smart filters, ratings, and performance-focused categories."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,11 +21,11 @@
     <meta property="og:site_name" content="PlayPro Sports" />
     <meta property="og:type" content="website" />
   </head>
-  <body data-page="cart">
+  <body data-page="shop">
     <div class="topbar">
       <div class="container topbar-content">
-        <span>Cart protected with secure local checkout workflow.</span>
-        <span class="topbar-highlight">PlayPro Founder: Deon Menezes</span>
+        <span>Performance catalog updated weekly with fresh athlete-grade drops.</span>
+        <span class="topbar-highlight">PlayPro by Deon Menezes</span>
       </div>
     </div>
 
@@ -89,88 +89,94 @@
       <div class="container">
         <section class="page-hero reveal">
           <img
-            src="https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg?auto=compress&cs=tinysrgb&w=1900"
-            alt="Athlete equipment shopping"
+            src="https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg?auto=compress&cs=tinysrgb&w=1900"
+            alt="High quality sports equipment"
           />
           <div class="page-hero-body">
             <div class="breadcrumbs">
               <a href="index.html">Home</a>
               <span>/</span>
-              <strong>Cart</strong>
+              <strong>Shop</strong>
             </div>
-            <h1>Your Performance Cart</h1>
+            <h1>Full Performance Catalog</h1>
             <p>
-              Review your selected gear, apply promo codes, and lock in your
-              order before checkout.
+              Filter, compare, and discover the exact gear your training cycle
+              needs. Every item is selected for pro-level performance.
             </p>
           </div>
         </section>
 
-        <section class="cart-layout">
-          <div>
-            <div id="cartEmpty" class="empty-state reveal">
-              Your cart is empty. Explore premium equipment from the
-              <a href="shop.html">shop catalog</a>.
-            </div>
+        <section class="shop-layout">
+          <aside class="filters-card">
+            <p class="section-kicker">Smart Filters</p>
+            <h2 class="section-title" style="font-size: 2rem">Refine Your Gear</h2>
 
-            <div id="cartContent" class="hidden">
-              <div class="cart-list" id="cartList"></div>
-            </div>
-          </div>
-
-          <aside class="cart-summary reveal">
-            <h2 class="summary-title">Order Summary</h2>
-
-            <label class="filter-label" for="shippingSelect">Shipping Speed</label>
-            <select id="shippingSelect" class="filter-control">
-              <option value="standard">Standard (Free over $180 / $8)</option>
-              <option value="express">Express (2-day / $22)</option>
-            </select>
-
-            <div class="promo-row">
+            <div class="filter-group">
+              <label class="filter-label" for="shopSearch">Search</label>
               <input
-                id="promoCode"
-                type="text"
-                placeholder="Promo code (try PLAYPRO10)"
+                id="shopSearch"
+                class="filter-control"
+                type="search"
+                placeholder="Try: football, running, recovery"
               />
-              <button class="btn btn-secondary btn-small" id="promoApply" type="button">
-                Apply
-              </button>
             </div>
 
-            <div class="summary-row">
-              <span>Subtotal</span>
-              <strong id="summarySubtotal">$0.00</strong>
-            </div>
-            <div class="summary-row">
-              <span>Shipping</span>
-              <strong id="summaryShipping">$0.00</strong>
-            </div>
-            <div class="summary-row">
-              <span>Discount</span>
-              <strong id="summaryDiscount">$0.00</strong>
-            </div>
-            <div class="summary-row">
-              <span>Tax</span>
-              <strong id="summaryTax">$0.00</strong>
-            </div>
-            <div class="summary-row total">
-              <span>Total</span>
-              <strong id="summaryTotal">$0.00</strong>
+            <div class="filter-group">
+              <label class="filter-label" for="shopCategory">Category</label>
+              <select id="shopCategory" class="filter-control"></select>
             </div>
 
-            <button id="clearCartButton" class="btn btn-ghost btn-block" type="button">
-              Clear Cart
+            <div class="filter-group">
+              <label class="filter-label" for="shopSort">Sort By</label>
+              <select id="shopSort" class="filter-control">
+                <option value="popular">Most Popular</option>
+                <option value="new">Newest Arrivals</option>
+                <option value="rating">Highest Rating</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="trending">Trending Activity</option>
+                <option value="use-case">Sort by Use Case</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label class="filter-label" for="shopMaxPrice">Max Price</label>
+              <input
+                id="shopMaxPrice"
+                type="range"
+                min="40"
+                max="260"
+                value="260"
+              />
+              <p class="price-range-output">Up to <span id="shopMaxPriceOutput"></span></p>
+            </div>
+
+            <button id="shopClear" class="btn btn-ghost btn-block" type="button">
+              Clear Filters
             </button>
-            <a id="checkoutLink" href="checkout.html" class="btn btn-primary btn-block">
-              Proceed to Checkout
-            </a>
 
-            <p class="summary-note">
-              All transactions are demo-safe in this build. No live payment is
-              processed.
-            </p>
+            <div class="filter-group">
+              <p class="filter-label">X Lab Modules</p>
+              <div class="stack-grid">
+                <a class="chip" href="drops.html">Live Drops</a>
+                <a class="chip" href="bundles.html">Bundle Builder</a>
+                <a class="chip" href="rewards.html">Loyalty Rewards</a>
+              </div>
+            </div>
           </aside>
+
+          <section>
+            <div class="shop-toolbar reveal">
+              <p class="result-count" id="shopCount">0 products found</p>
+              <a href="wishlist.html" class="chip">Open Wishlist</a>
+            </div>
+
+            <div id="shopEmpty" class="empty-state hidden">
+              No products matched your filters. Try resetting the filter panel.
+            </div>
+
+            <div id="shopGrid" class="product-grid"></div>
+          </section>
         </section>
       </div>
     </main>
@@ -181,17 +187,20 @@
           <a href="index.html" class="logo"
             ><span class="logo-accent">Play</span>Pro Sports</a
           >
-          <p>Sport-specific equipment engineered for real-world competition.</p>
+          <p>
+            Precision sports equipment built for serious training and match-day
+            confidence.
+          </p>
           <p class="founder-note">Created and founded by Deon Menezes.</p>
         </div>
 
         <div class="footer-col">
-          <h4>Store</h4>
+          <h4>Shop</h4>
           <ul class="footer-links">
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="wishlist.html">Wishlist</a></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="shop.html">All Products</a></li>
+            <li><a href="shop.html?category=Football">Football</a></li>
+            <li><a href="shop.html?category=Basketball">Basketball</a></li>
+            <li><a href="shop.html?category=Running">Running</a></li>
           </ul>
         </div>
 
@@ -200,25 +209,25 @@
           <ul class="footer-links">
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="contact.html">Policies</a></li>
-            <li><a href="contact.html">Support</a></li>
+            <li><a href="wishlist.html">Wishlist</a></li>
+            <li><a href="cart.html">Cart</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Help</h4>
+          <h4>Checkout</h4>
           <ul class="footer-links">
-            <li><a href="contact.html">Shipping Questions</a></li>
+            <li><a href="checkout.html">Secure Checkout</a></li>
+            <li><a href="contact.html">Support</a></li>
             <li><a href="contact.html">Returns</a></li>
             <li><a href="contact.html">Bulk Orders</a></li>
-            <li><a href="contact.html">Account Support</a></li>
           </ul>
         </div>
       </div>
 
       <div class="container footer-bottom">
         <span>&copy; <span data-year></span> PlayPro Sports Store. All rights reserved.</span>
-        <span>Secure cart experience optimized for speed.</span>
+        <span>Elite gear. Real athletes. Better outcomes.</span>
       </div>
     </footer>
 

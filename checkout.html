@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cart | PlayPro Sports</title>
+    <title>Checkout | PlayPro Sports</title>
     <meta
       name="description"
-      content="Review your selected sports equipment, apply offers, and proceed to secure checkout."
+      content="Complete checkout for your selected PlayPro sports equipment with a clean, fast order flow."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,11 +21,11 @@
     <meta property="og:site_name" content="PlayPro Sports" />
     <meta property="og:type" content="website" />
   </head>
-  <body data-page="cart">
+  <body data-page="checkout">
     <div class="topbar">
       <div class="container topbar-content">
-        <span>Cart protected with secure local checkout workflow.</span>
-        <span class="topbar-highlight">PlayPro Founder: Deon Menezes</span>
+        <span>Fast checkout workflow with order confirmation.</span>
+        <span class="topbar-highlight">By Deon Menezes</span>
       </div>
     </div>
 
@@ -89,87 +89,104 @@
       <div class="container">
         <section class="page-hero reveal">
           <img
-            src="https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg?auto=compress&cs=tinysrgb&w=1900"
-            alt="Athlete equipment shopping"
+            src="https://images.pexels.com/photos/1456706/pexels-photo-1456706.jpeg?auto=compress&cs=tinysrgb&w=1900"
+            alt="Secure checkout"
           />
           <div class="page-hero-body">
             <div class="breadcrumbs">
               <a href="index.html">Home</a>
               <span>/</span>
-              <strong>Cart</strong>
+              <a href="cart.html">Cart</a>
+              <span>/</span>
+              <strong>Checkout</strong>
             </div>
-            <h1>Your Performance Cart</h1>
+            <h1>Complete Your Order</h1>
             <p>
-              Review your selected gear, apply promo codes, and lock in your
-              order before checkout.
+              Finish your purchase with a streamlined checkout designed for speed
+              and clarity.
             </p>
           </div>
         </section>
 
-        <section class="cart-layout">
-          <div>
-            <div id="cartEmpty" class="empty-state reveal">
-              Your cart is empty. Explore premium equipment from the
-              <a href="shop.html">shop catalog</a>.
+        <section class="checkout-layout">
+          <article class="panel-card reveal">
+            <div id="checkoutEmpty" class="empty-state hidden">
+              Your cart is empty. Add products from the <a href="shop.html">shop</a>
+              before checkout.
             </div>
 
-            <div id="cartContent" class="hidden">
-              <div class="cart-list" id="cartList"></div>
-            </div>
-          </div>
+            <form id="checkoutForm">
+              <p class="section-kicker">Billing and Delivery</p>
+              <h2 class="section-title" style="font-size: 2rem; margin-bottom: 0.7rem">
+                Shipping Details
+              </h2>
+
+              <div class="form-grid">
+                <div>
+                  <label class="filter-label" for="checkoutName">Full Name</label>
+                  <input id="checkoutName" class="form-control" required />
+                </div>
+                <div>
+                  <label class="filter-label" for="checkoutPhone">Phone</label>
+                  <input id="checkoutPhone" class="form-control" required />
+                </div>
+                <div class="full">
+                  <label class="filter-label" for="checkoutEmail">Email Address</label>
+                  <input id="checkoutEmail" type="email" class="form-control" required />
+                </div>
+                <div class="full">
+                  <label class="filter-label" for="checkoutAddress">Street Address</label>
+                  <input id="checkoutAddress" class="form-control" required />
+                </div>
+                <div>
+                  <label class="filter-label" for="checkoutCity">City</label>
+                  <input id="checkoutCity" class="form-control" required />
+                </div>
+                <div>
+                  <label class="filter-label" for="checkoutPostal">Postal Code</label>
+                  <input id="checkoutPostal" class="form-control" required />
+                </div>
+                <div>
+                  <label class="filter-label" for="checkoutCountry">Country</label>
+                  <input id="checkoutCountry" class="form-control" required />
+                </div>
+                <div>
+                  <label class="filter-label" for="checkoutMethod">Payment Method</label>
+                  <select id="checkoutMethod" class="form-control" required>
+                    <option value="">Select payment</option>
+                    <option value="card">Credit / Debit Card</option>
+                    <option value="upi">UPI / Wallet</option>
+                    <option value="cod">Cash on Delivery</option>
+                  </select>
+                </div>
+                <div class="full">
+                  <label class="filter-label" for="checkoutNotes">Order Notes</label>
+                  <textarea
+                    id="checkoutNotes"
+                    class="form-control"
+                    rows="3"
+                    placeholder="Any delivery notes or special instructions"
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="radio-row" style="margin-top: 0.7rem">
+                <label class="radio-pill">
+                  <input type="checkbox" required />
+                  I confirm my shipping and billing information is correct.
+                </label>
+              </div>
+
+              <button class="btn btn-primary" type="submit" style="margin-top: 0.95rem">
+                Confirm Order
+              </button>
+            </form>
+
+            <div id="checkoutSuccess" class="checkout-success hidden"></div>
+          </article>
 
           <aside class="cart-summary reveal">
-            <h2 class="summary-title">Order Summary</h2>
-
-            <label class="filter-label" for="shippingSelect">Shipping Speed</label>
-            <select id="shippingSelect" class="filter-control">
-              <option value="standard">Standard (Free over $180 / $8)</option>
-              <option value="express">Express (2-day / $22)</option>
-            </select>
-
-            <div class="promo-row">
-              <input
-                id="promoCode"
-                type="text"
-                placeholder="Promo code (try PLAYPRO10)"
-              />
-              <button class="btn btn-secondary btn-small" id="promoApply" type="button">
-                Apply
-              </button>
-            </div>
-
-            <div class="summary-row">
-              <span>Subtotal</span>
-              <strong id="summarySubtotal">$0.00</strong>
-            </div>
-            <div class="summary-row">
-              <span>Shipping</span>
-              <strong id="summaryShipping">$0.00</strong>
-            </div>
-            <div class="summary-row">
-              <span>Discount</span>
-              <strong id="summaryDiscount">$0.00</strong>
-            </div>
-            <div class="summary-row">
-              <span>Tax</span>
-              <strong id="summaryTax">$0.00</strong>
-            </div>
-            <div class="summary-row total">
-              <span>Total</span>
-              <strong id="summaryTotal">$0.00</strong>
-            </div>
-
-            <button id="clearCartButton" class="btn btn-ghost btn-block" type="button">
-              Clear Cart
-            </button>
-            <a id="checkoutLink" href="checkout.html" class="btn btn-primary btn-block">
-              Proceed to Checkout
-            </a>
-
-            <p class="summary-note">
-              All transactions are demo-safe in this build. No live payment is
-              processed.
-            </p>
+            <div id="checkoutSummary"></div>
           </aside>
         </section>
       </div>
@@ -181,7 +198,7 @@
           <a href="index.html" class="logo"
             ><span class="logo-accent">Play</span>Pro Sports</a
           >
-          <p>Sport-specific equipment engineered for real-world competition.</p>
+          <p>Premium, athlete-first sports equipment and a smooth buying flow.</p>
           <p class="founder-note">Created and founded by Deon Menezes.</p>
         </div>
 
@@ -200,25 +217,25 @@
           <ul class="footer-links">
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="contact.html">Policies</a></li>
             <li><a href="contact.html">Support</a></li>
+            <li><a href="contact.html">Policies</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Help</h4>
+          <h4>Assistance</h4>
           <ul class="footer-links">
-            <li><a href="contact.html">Shipping Questions</a></li>
-            <li><a href="contact.html">Returns</a></li>
+            <li><a href="contact.html">Payment Help</a></li>
+            <li><a href="contact.html">Shipping FAQ</a></li>
             <li><a href="contact.html">Bulk Orders</a></li>
-            <li><a href="contact.html">Account Support</a></li>
+            <li><a href="contact.html">Returns</a></li>
           </ul>
         </div>
       </div>
 
       <div class="container footer-bottom">
         <span>&copy; <span data-year></span> PlayPro Sports Store. All rights reserved.</span>
-        <span>Secure cart experience optimized for speed.</span>
+        <span>Checkout optimized for clarity and speed.</span>
       </div>
     </footer>
 

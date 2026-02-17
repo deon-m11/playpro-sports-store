@@ -4,156 +4,247 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PlayPro Sports Store | Contact</title>
+    <title>Contact PlayPro Sports</title>
+    <meta
+      name="description"
+      content="Contact PlayPro Sports for support, bulk orders, partnerships, and product guidance."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="theme-color" content="#ff6a3d" />
+    <meta property="og:site_name" content="PlayPro Sports" />
+    <meta property="og:type" content="website" />
   </head>
+  <body data-page="contact">
+    <div class="topbar">
+      <div class="container topbar-content">
+        <span>Need custom kits, team bundles, or support? Talk to our specialists.</span>
+        <span class="topbar-highlight">PlayPro Founder: Deon Menezes</span>
+      </div>
+    </div>
 
-  <body>
-    <!-- Header / Navigation -->
     <header class="site-header">
       <div class="container nav-container">
-        <div class="logo">
-          <span class="logo-accent">Play</span>Pro
-        </div>
+        <a href="index.html" class="logo" aria-label="PlayPro Sports Home"
+          ><span class="logo-accent">Play</span>Pro Sports</a
+        >
 
-        <nav class="main-nav" id="mainNav">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="about.html" class="nav-link">About</a>
-          <a
-            href="contact.html"
-            class="nav-link active"
-            aria-current="page"
+        <nav class="main-nav" data-main-nav>
+          <a class="nav-link" data-page-link="home" href="index.html">Home</a>
+          <a class="nav-link" data-page-link="shop" href="shop.html">Shop</a>
+          <a class="nav-link" data-page-link="experience" href="experience.html">Experience</a>
+          <a class="nav-link" data-page-link="about" href="about.html">About</a>
+          <a class="nav-link" data-page-link="contact" href="contact.html"
+            >Contact</a
           >
-            Contact
-          </a>
-          <a href="cart.html" class="nav-link cart-link">
-            Cart
-            <span class="cart-count-badge" id="cartCountHeader"></span>
-          </a>
         </nav>
 
-        <button
-          class="nav-toggle"
-          id="navToggle"
-          aria-label="Toggle navigation"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <div class="nav-actions">
+          <form class="site-search" data-site-search role="search" aria-label="Search products">
+            <input type="search" data-site-search-input placeholder="Search gear" aria-label="Search products">
+            <button type="submit" aria-label="Search catalog">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="M20 20l-3.4-3.4"></path>
+              </svg>
+            </button>
+          </form>
+          <button class="icon-link theme-toggle" data-theme-toggle type="button" aria-label="Switch theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2.5M12 19.5V22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M2 12h2.5M19.5 12H22M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"></path>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M20.2 14.7A8.5 8.5 0 1 1 9.3 3.8a7 7 0 1 0 10.9 10.9z"></path>
+            </svg>
+          </button>
+          <a class="icon-link" href="wishlist.html" aria-label="Wishlist">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 21s-6.716-4.35-9.2-8.281C1.424 10.565 2.052 7.44 4.42 5.82c2.165-1.48 4.773-.915 6.58 1.2 1.807-2.115 4.416-2.68 6.58-1.2 2.368 1.62 2.996 4.745 1.62 6.9C18.716 16.65 12 21 12 21z"/>
+            </svg>
+            <span class="icon-badge" data-wishlist-count></span>
+          </a>
+          <a class="icon-link" href="cart.html" aria-label="Cart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="9" cy="20" r="1.5"></circle>
+              <circle cx="17" cy="20" r="1.5"></circle>
+              <path d="M3 4h2l2.4 10.2a1 1 0 0 0 .98.8H18.2a1 1 0 0 0 .98-.8L21 7H7"></path>
+            </svg>
+            <span class="icon-badge" data-cart-count></span>
+          </a>
+          <button class="nav-toggle" data-nav-toggle aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
     </header>
 
-    <!-- Main Content -->
-    <main id="mainContent">
-      <!-- Contact / Feedback Section -->
-      <section class="section">
-        <div class="container contact-layout">
-          <div class="contact-form-wrapper">
-            <h1>Contact Us</h1>
+    <main class="section-tight">
+      <div class="container">
+        <section class="page-hero reveal">
+          <img
+            src="https://images.pexels.com/photos/16970134/pexels-photo-16970134.jpeg?auto=compress&cs=tinysrgb&w=1900"
+            alt="Customer support team"
+          />
+          <div class="page-hero-body">
+            <div class="breadcrumbs">
+              <a href="index.html">Home</a>
+              <span>/</span>
+              <strong>Contact</strong>
+            </div>
+            <h1>Talk to the PlayPro Team</h1>
             <p>
-              Have a question about our products, bulk orders, or partnerships?
-              Send us a message and we will get back to you soon.
+              Reach out for product guidance, order assistance, custom team kits,
+              and partnership inquiries.
             </p>
+          </div>
+        </section>
 
-            <form id="contactForm" class="contact-form" novalidate>
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Your full name"
-                  required
-                />
-                <small class="error-message" id="nameError"></small>
+        <section class="contact-layout">
+          <article class="contact-card reveal">
+            <p class="section-kicker">Send Message</p>
+            <h2 class="section-title" style="font-size: 2rem; margin-bottom: 0.8rem">
+              Contact Form
+            </h2>
+            <form id="contactForm" class="contact-grid" novalidate>
+              <div>
+                <label class="filter-label" for="contactName">Name</label>
+                <input id="contactName" class="form-control" required />
               </div>
-
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="you@example.com"
-                  required
-                />
-                <small class="error-message" id="emailError"></small>
+              <div>
+                <label class="filter-label" for="contactPhone">Phone</label>
+                <input id="contactPhone" class="form-control" required />
               </div>
-
-              <div class="form-group">
-                <label for="message">Message</label>
+              <div class="full">
+                <label class="filter-label" for="contactEmail">Email</label>
+                <input id="contactEmail" type="email" class="form-control" required />
+              </div>
+              <div class="full">
+                <label class="filter-label" for="contactTopic">Topic</label>
+                <select id="contactTopic" class="form-control" required>
+                  <option value="">Select topic</option>
+                  <option value="order">Order support</option>
+                  <option value="product">Product recommendation</option>
+                  <option value="bulk">Bulk / team order</option>
+                  <option value="partner">Partnership inquiry</option>
+                </select>
+              </div>
+              <div class="full">
+                <label class="filter-label" for="contactMessage">Message</label>
                 <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  placeholder="Tell us how we can help"
+                  id="contactMessage"
+                  class="form-control"
+                  rows="5"
+                  placeholder="Tell us what you need"
                   required
                 ></textarea>
-                <small class="error-message" id="messageError"></small>
               </div>
-
-              <button type="submit" class="btn btn-primary">Submit</button>
-              <p
-                class="form-success"
-                id="formSuccess"
-                aria-live="polite"
-              ></p>
+              <div class="full">
+                <button type="submit" class="btn btn-primary">Send Message</button>
+              </div>
             </form>
-          </div>
+          </article>
 
-          <div class="contact-info">
-            <h2>Store Information</h2>
-            <p><strong>PlayPro Sports Store</strong></p>
-            <p>
-              123 Pro Arena Avenue<br />
-              Sportstown, ST 56789
-            </p>
-            <p>
-              <strong>Phone:</strong> +1 (555) 123-4567<br />
-              <strong>Email:</strong> support@playprostore.com
-            </p>
-
-            <h3>Working Hours</h3>
-            <p>
-              Monday - Saturday: 9:00 AM - 8:00 PM<br />
-              Sunday: 10:00 AM - 5:00 PM
+          <div class="contact-card reveal">
+            <p class="section-kicker">Store Details</p>
+            <h2 class="section-title" style="font-size: 2rem; margin-bottom: 0.65rem">
+              Support Channels
+            </h2>
+            <p class="muted">
+              Email: support@playprosports.com<br />
+              Phone: +1 (555) 980-4401<br />
+              Hours: Monday-Saturday, 9:00 AM-8:00 PM
             </p>
 
-            <h3>Find Us</h3>
-            <div class="map-placeholder">
+            <div class="faq-list">
+              <article class="faq-item">
+                <button class="faq-question" type="button">How fast is shipping?</button>
+                <div class="faq-answer">
+                  Standard shipping is 3-5 business days. Express shipping usually
+                  arrives within 2 business days depending on your location.
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">Do you offer team discounts?</button>
+                <div class="faq-answer">
+                  Yes. Team and academy orders receive volume pricing and
+                  dedicated support. Use the bulk order topic in the form.
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">Can I return products?</button>
+                <div class="faq-answer">
+                  Absolutely. PlayPro supports a 30-day return window on eligible
+                  products in original condition.
+                </div>
+              </article>
+            </div>
+
+            <div style="margin-top: 0.9rem">
               <iframe
-                title="PlayPro Sports Store Location - India"
-                src="https://maps.google.com/maps?q=India&t=&z=4&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="260"
-                style="border: 0; border-radius: 0.9rem;"
+                class="map-frame"
+                title="PlayPro Headquarters"
+                src="https://maps.google.com/maps?q=New%20York%2C%20USA&t=&z=10&ie=UTF8&iwloc=&output=embed"
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
-              <p class="map-subtitle">
-                Map centered on India. Replace this with your exact store
-                location if needed.
-              </p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
 
-    <!-- Footer -->
     <footer class="site-footer">
-      <div class="container footer-content">
-        <p>
-          &copy; <span id="year"></span> PlayPro Sports Store.
-          All rights reserved.
-        </p>
-
-        <div class="footer-social">
-          <a href="#" aria-label="PlayPro on Facebook">Facebook</a>
-          <a href="#" aria-label="PlayPro on Instagram">Instagram</a>
-          <a href="#" aria-label="PlayPro on Twitter">Twitter</a>
+      <div class="container footer-main">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"
+            ><span class="logo-accent">Play</span>Pro Sports</a
+          >
+          <p>Reach out for custom recommendations and elite performance advice.</p>
+          <p class="founder-note">Created and founded by Deon Menezes.</p>
         </div>
+
+        <div class="footer-col">
+          <h4>Store</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="wishlist.html">Wishlist</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Careers</a></li>
+            <li><a href="contact.html">Press</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Shipping</a></li>
+            <li><a href="contact.html">Returns</a></li>
+            <li><a href="contact.html">Bulk Orders</a></li>
+            <li><a href="contact.html">FAQs</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span>&copy; <span data-year></span> PlayPro Sports Store. All rights reserved.</span>
+        <span>Dedicated support for athletes and teams.</span>
       </div>
     </footer>
 

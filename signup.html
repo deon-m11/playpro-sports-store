@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | PlayPro Sports Account</title>
+    <meta
+      name="description"
+      content="Create your PlayPro Sports account to unlock personalized recommendations, order tracking, loyalty rewards, and faster checkout."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="theme-color" content="#ff6a3d" />
+    <meta property="og:site_name" content="PlayPro Sports" />
+    <meta property="og:type" content="website" />
+  </head>
+  <body data-page="signup">
+    <div class="topbar">
+      <div class="container topbar-content">
+        <span>Join PlayPro Sports for tailored gear recommendations and loyalty rewards.</span>
+        <span class="topbar-highlight">Founded by Deon Menezes</span>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container nav-container">
+        <a href="index.html" class="logo" aria-label="PlayPro Sports Home"
+          ><span class="logo-accent">Play</span>Pro Sports</a
+        >
+
+        <nav class="main-nav" data-main-nav>
+          <a class="nav-link" data-page-link="home" href="index.html">Home</a>
+          <a class="nav-link" data-page-link="shop" href="shop.html">Shop</a>
+          <a class="nav-link" data-page-link="experience" href="experience.html">Experience</a>
+          <a class="nav-link" data-page-link="about" href="about.html">About</a>
+          <a class="nav-link" data-page-link="contact" href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <form class="site-search" data-site-search role="search" aria-label="Search products">
+            <input type="search" data-site-search-input placeholder="Search gear" aria-label="Search products" />
+            <button type="submit" aria-label="Search catalog">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="M20 20l-3.4-3.4"></path>
+              </svg>
+            </button>
+          </form>
+          <button class="icon-link theme-toggle" data-theme-toggle type="button" aria-label="Switch theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2.5M12 19.5V22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M2 12h2.5M19.5 12H22M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"></path>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M20.2 14.7A8.5 8.5 0 1 1 9.3 3.8a7 7 0 1 0 10.9 10.9z"></path>
+            </svg>
+          </button>
+          <a class="icon-link" href="wishlist.html" aria-label="Wishlist">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 21s-6.716-4.35-9.2-8.281C1.424 10.565 2.052 7.44 4.42 5.82c2.165-1.48 4.773-.915 6.58 1.2 1.807-2.115 4.416-2.68 6.58-1.2 2.368 1.62 2.996 4.745 1.62 6.9C18.716 16.65 12 21 12 21z" />
+            </svg>
+            <span class="icon-badge" data-wishlist-count></span>
+          </a>
+          <a class="icon-link" href="cart.html" aria-label="Cart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="9" cy="20" r="1.5"></circle>
+              <circle cx="17" cy="20" r="1.5"></circle>
+              <path d="M3 4h2l2.4 10.2a1 1 0 0 0 .98.8H18.2a1 1 0 0 0 .98-.8L21 7H7"></path>
+            </svg>
+            <span class="icon-badge" data-cart-count></span>
+          </a>
+          <button class="nav-toggle" data-nav-toggle aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="section-tight">
+      <div class="container">
+        <section class="page-hero reveal">
+          <img
+            src="https://images.pexels.com/photos/1884574/pexels-photo-1884574.jpeg?auto=compress&cs=tinysrgb&w=1900"
+            alt="Athlete preparing for training"
+          />
+          <div class="page-hero-body">
+            <div class="breadcrumbs">
+              <a href="index.html">Home</a>
+              <span>/</span>
+              <strong>Sign Up</strong>
+            </div>
+            <h1>Create Your Account</h1>
+            <p>Build your PlayPro profile and get gear recommendations personalized to your sport and goals.</p>
+          </div>
+        </section>
+
+        <section class="auth-layout">
+          <article class="auth-card reveal">
+            <p class="section-kicker">New Member</p>
+            <h2 class="section-title auth-title">Sign Up</h2>
+            <form id="signupForm" class="auth-form" novalidate>
+              <div class="form-grid">
+                <div class="full">
+                  <label class="filter-label" for="signupName">Full Name</label>
+                  <input id="signupName" name="name" class="form-control" autocomplete="name" required />
+                </div>
+                <div class="full">
+                  <label class="filter-label" for="signupEmail">Email</label>
+                  <input
+                    id="signupEmail"
+                    name="email"
+                    type="email"
+                    class="form-control"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+                <div>
+                  <label class="filter-label" for="signupPassword">Password</label>
+                  <input
+                    id="signupPassword"
+                    name="password"
+                    type="password"
+                    class="form-control"
+                    autocomplete="new-password"
+                    required
+                  />
+                </div>
+                <div>
+                  <label class="filter-label" for="signupConfirmPassword">Confirm Password</label>
+                  <input
+                    id="signupConfirmPassword"
+                    name="confirmPassword"
+                    type="password"
+                    class="form-control"
+                    autocomplete="new-password"
+                    required
+                  />
+                </div>
+                <div>
+                  <label class="filter-label" for="signupSport">Primary Sport</label>
+                  <select id="signupSport" name="sport" class="form-control">
+                    <option value="Football">Football</option>
+                    <option value="Basketball">Basketball</option>
+                    <option value="Running">Running</option>
+                    <option value="Cricket">Cricket</option>
+                    <option value="Recovery">Recovery</option>
+                    <option value="Training">Training</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="filter-label" for="signupGoal">Training Goal</label>
+                  <select id="signupGoal" name="goal" class="form-control">
+                    <option value="Beginner">Beginner Build</option>
+                    <option value="Academy">Academy Track</option>
+                    <option value="Pro-Level">Pro-Level</option>
+                    <option value="Recovery">Recovery & Mobility</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="auth-inline">
+                <button type="submit" class="btn btn-primary">Create Account</button>
+                <a href="login.html" class="btn btn-ghost">Already a Member</a>
+              </div>
+              <p id="signupResult" class="auth-result" aria-live="polite"></p>
+            </form>
+          </article>
+
+          <article class="auth-card reveal">
+            <p class="section-kicker">Account Benefits</p>
+            <h2 class="section-title auth-title">What You Unlock</h2>
+            <div class="stack-grid">
+              <div class="info-card">
+                <p class="label">Smart Recommendations</p>
+                <p class="value">Catalog suggestions tuned to your sport profile and shopping behavior.</p>
+              </div>
+              <div class="info-card">
+                <p class="label">Rewards Growth</p>
+                <p class="value">Earn points, level up loyalty tiers, and access member-only drops.</p>
+              </div>
+              <div class="info-card">
+                <p class="label">Order Management</p>
+                <p class="value">Track all purchases and manage account preferences from one profile page.</p>
+              </div>
+            </div>
+            <p class="auth-note">
+              By signing up, you agree to PlayPro account terms and service communications.
+            </p>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><span class="logo-accent">Play</span>Pro Sports</a>
+          <p>Join the PlayPro network and build a better training system.</p>
+          <p class="founder-note">Created and founded by Deon Menezes.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Account</h4>
+          <ul class="footer-links">
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="rewards.html">Rewards</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Catalog</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="bundles.html">Bundles</a></li>
+            <li><a href="drops.html">Drops</a></li>
+            <li><a href="wishlist.html">Wishlist</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="returns.html">Returns</a></li>
+            <li><a href="trust.html">Trust Center</a></li>
+            <li><a href="track-order.html">Track Order</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span>&copy; <span data-year></span> PlayPro Sports Store. All rights reserved.</span>
+        <span>Account-ready commerce for serious athletes.</span>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

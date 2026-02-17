@@ -1,83 +1,107 @@
-## PlayPro Sports Store
+## PlayPro Sports Store (Premium Rebuild)
 
-PlayPro Sports Store is a demo responsive ecommerce website built with **HTML**, **CSS**, and **JavaScript**.  
-It showcases a clean, modern sports‑themed UI suitable for an online sports equipment store.
+PlayPro is now a high-end, multi-page sports equipment storefront built with plain **HTML**, **CSS**, and **JavaScript**.
 
-### Features
+### What is new
 
-- **Multi‑page layout**: Home, About, and Contact pages.
-- **Navigation menu**: Links to Home, About, and Contact on every page.
-- **Modern sports UI**: Red, black, and white theme with card‑based layouts.
-- **Product showcase**:
-  - Product cards with image, name, price, and “Add to Cart” button.
-  - Clickable product images (open a larger placeholder image in a new tab).
-- **Contact / Feedback form**:
-  - Fields: Name, Email, Message, and Submit button.
-  - Basic client‑side form validation using JavaScript.
-- **Responsive design**: Mobile‑friendly navigation and layout.
-- **Footer**: Social media links on every page.
+- Complete premium UI redesign with a custom visual system (typography, gradients, card hierarchy, and responsive layouts).
+- Motion and interaction improvements:
+  - Scroll reveal animations
+  - Counter animations
+  - Hover transitions and floating hero cards
+  - Toast notifications
+- Full catalog experience:
+  - Dynamic product catalog
+  - Smart filters (search, category, sorting, price cap)
+  - Product detail pages with gallery and highlights
+- Shopping flow upgrades:
+  - Persistent cart (localStorage)
+  - Persistent wishlist (localStorage)
+  - Promo code support (`PLAYPRO10`)
+  - Shipping mode logic (standard/express)
+  - Checkout flow with validation and order confirmation
+- About/brand upgrade that clearly mentions the founder.
+- PlayPro X Lab expansion with advanced ecommerce experience pages:
+  - Bundles, Drops, Rewards, Track Order, Returns, Team Orders, Gift Cards,
+    Resources, Partnerships, Press, Trust Center.
+- New interaction systems:
+  - Live drop countdown timers
+  - Sport scene switching hero with parallax, seasonal lanes, and dynamic drop rails
+  - Athlete testimonial wall (video snippets) and before/after outcome carousel
+  - Product quick view modal
+  - Product compare dock + comparison modal
+  - Simulated tool workflows for loyalty, bundles, tracking, returns, B2B, and media
+  - No-key AI shopping assistant:
+    - Uses local Python GPT-2 server on localhost when available (`ai/gpt2_coach_server.py`)
+    - Uses local Ollama automatically on localhost (if running)
+    - Uses in-browser open-source model on hosted environments (e.g., GitHub Pages)
+    - Falls back to smart built-in coaching replies if model loading fails
+  - Social-proof activity feed
+  - Smart cart drawer with shipping progress and bundle completion prompts
+  - Advanced shop discovery: grouped autocomplete, visual search, visual sport filters, use-case filters, density toggles, infinite/pagination modes
+  - Product intelligence modules: 360 preview slider, fit assistant, spec accordions, compatibility matrix, review uploads
+- Growth/ops/enterprise surfaces:
+  - Personal dashboard, analytics dashboard, admin console
+  - Founder blog, live shopping page, limited drop queue page, VIP page, team spotlight page
+  - Multi-currency, reduced-motion preference, service worker registration, structured data injection
+  - Admin operations tooling: campaign scheduler, catalog bulk updates, RBAC simulation, and audit workflow cards
 
-### Project Structure
+### Founder
 
-```text
-playpro-sports-store/
-├── index.html       # Home page (hero, featured products, CTA)
-├── about.html       # About page (mission, vision, categories)
-├── contact.html     # Contact page (feedback form, info, map placeholder)
-├── css/
-│   └── style.css    # Global styles and responsive layout
-├── js/
-│   └── script.js    # Navigation toggle, add‑to‑cart alert, form validation
-└── images/          # Place your product / hero images here (optional)
+This project now explicitly includes:
+
+- **Created and founded by Deon Menezes**
+
+### Pages
+
+- `index.html` - Premium landing page with hero, categories, featured products
+- `shop.html` - Full catalog with filtering and sorting
+- `product.html` - Dynamic product details (uses query param `?id=`)
+- `wishlist.html` - Saved products view
+- `cart.html` - Cart management with totals and promo support
+- `checkout.html` - Checkout form and order confirmation
+- `about.html` - Brand story and founder section
+- `contact.html` - Contact form, FAQ accordion, and map
+- `experience.html` - PlayPro X Lab innovation hub
+- `bundles.html`, `drops.html`, `rewards.html`, `track-order.html`, `returns.html`
+- `team-orders.html`, `gift-cards.html`, `resources.html`, `partnerships.html`
+- `press.html`, `trust.html`
+- `dashboard.html`, `analytics.html`, `admin.html`
+- `blog.html`, `live.html`, `queue.html`, `vip.html`, `spotlight.html`
+- `login.html`, `signup.html`, `profile.html`
+
+### Tech details
+
+- Global styles: `css/style.css`
+- Store logic and data: `js/script.js`
+- No build tooling required.
+
+### Run locally
+
+1. Open this folder.
+2. Run a local static server (example):
+
+```bash
+python3 -m http.server 4173
 ```
 
-> Note: The demo uses online placeholder images in `index.html`.  
-> You can replace them with your own local files stored in the `images/` folder.
+3. Open `http://127.0.0.1:4173/` in your browser.
 
-### How to Run Locally
+### Optional: local GPT-2 coach (no API key)
 
-1. **Download or clone** this project into a folder called `playpro-sports-store`.
-2. Open the folder in your code editor.
-3. Double‑click `index.html` (or right‑click → “Open with” → your browser).
-4. Navigate using the top menu to view the About and Contact pages.
+1. Keep the static server running.
+2. In another terminal, start the local coach endpoint:
 
-### Basic Customization
+```bash
+python3 ai/gpt2_coach_server.py
+```
 
-- **Colors & theme**: Edit `css/style.css` to adjust colors, fonts, and spacing.
-- **Products**: Update the product cards in `index.html` (name, price, copy, image URLs).
-- **Contact info**: Edit address, phone, and email in `contact.html`.
-- **Google Map**: Replace the placeholder box in `contact.html` with your own Google Maps `<iframe>`.
+3. Open the website on localhost and use AI Coach.
+   - If GPT-2 cannot load, the coach still works via smart rules fallback.
+   - First GPT-2 run may download model files from Hugging Face.
 
-### Hosting on GitHub Pages
+### Notes
 
-1. **Create a new GitHub repository**
-   - Go to GitHub and create a new repository named `playpro-sports-store`.
-   - Do **not** initialize with a README if you already have this one locally.
-
-2. **Push the project to GitHub**
-   - Open a terminal in the `playpro-sports-store` folder.
-   - Run the following commands (replace `YOUR_USERNAME` with your GitHub username):
-
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit - PlayPro Sports Store"
-   git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/playpro-sports-store.git
-   git push -u origin main
-   ```
-
-3. **Enable GitHub Pages**
-   - In your GitHub repository, go to **Settings → Pages**.
-   - Under **Source**, select **Deploy from a branch**.
-   - Choose the `main` branch and `/ (root)` folder, then click **Save**.
-
-4. **Access your site**
-   - After a short build time, your site will be live at:
-     - `https://YOUR_USERNAME.github.io/playpro-sports-store/`
-   - Open this URL in your browser to view the live demo.
-
-### License
-
-This project is provided as a demo/learning resource. You are free to modify and reuse it for personal or educational purposes.
-
+- Product and section imagery uses high-quality remote image sources.
+- Cart, wishlist, and checkout data are demo-only and stored in browser localStorage.
+- Enterprise/AI/ops features are implemented as frontend-ready interactive simulations.

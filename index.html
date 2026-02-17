@@ -4,246 +4,470 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PlayPro Sports Store | Home</title>
+    <title>PlayPro Sports | Elite Sports Equipment Store</title>
+    <meta
+      name="description"
+      content="PlayPro Sports is a premium sports equipment store with elite gear for football, basketball, running, training, and recovery. Founded by Deon Menezes."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
-
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-WCP9NVG8MD"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-WCP9NVG8MD");
-    </script>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="theme-color" content="#ff6a3d" />
+    <meta property="og:site_name" content="PlayPro Sports" />
+    <meta property="og:type" content="website" />
   </head>
+  <body data-page="home">
+    <div class="topbar">
+      <div class="container topbar-content">
+        <span>Nationwide Shipping • Pro Athlete Approved • 30-Day Returns</span>
+        <span class="topbar-highlight">Founded by Deon Menezes</span>
+      </div>
+    </div>
 
-  <body>
-    <!-- Header / Navigation -->
     <header class="site-header">
       <div class="container nav-container">
-        <div class="logo">
-          <span class="logo-accent">Play</span>Pro
-        </div>
+        <a href="index.html" class="logo" aria-label="PlayPro Sports Home"
+          ><span class="logo-accent">Play</span>Pro Sports</a
+        >
 
-        <nav class="main-nav" id="mainNav">
-          <a
-            href="index.html"
-            class="nav-link active"
-            aria-current="page"
-            >Home</a
+        <nav class="main-nav" data-main-nav>
+          <a class="nav-link" data-page-link="home" href="index.html">Home</a>
+          <a class="nav-link" data-page-link="shop" href="shop.html">Shop</a>
+          <a class="nav-link" data-page-link="experience" href="experience.html">Experience</a>
+          <a class="nav-link" data-page-link="about" href="about.html">About</a>
+          <a class="nav-link" data-page-link="contact" href="contact.html"
+            >Contact</a
           >
-          <a href="about.html" class="nav-link">About</a>
-          <a href="contact.html" class="nav-link">Contact</a>
-          <a href="cart.html" class="nav-link cart-link">
-            Cart
-            <span class="cart-count-badge" id="cartCountHeader"></span>
-          </a>
         </nav>
 
-        <button
-          class="nav-toggle"
-          id="navToggle"
-          aria-label="Toggle navigation"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <div class="nav-actions">
+          <form class="site-search" data-site-search role="search" aria-label="Search products">
+            <input type="search" data-site-search-input placeholder="Search gear" aria-label="Search products">
+            <button type="submit" aria-label="Search catalog">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="M20 20l-3.4-3.4"></path>
+              </svg>
+            </button>
+          </form>
+          <button class="icon-link theme-toggle" data-theme-toggle type="button" aria-label="Switch theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2.5M12 19.5V22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M2 12h2.5M19.5 12H22M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"></path>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M20.2 14.7A8.5 8.5 0 1 1 9.3 3.8a7 7 0 1 0 10.9 10.9z"></path>
+            </svg>
+          </button>
+          <a class="icon-link" href="wishlist.html" aria-label="Wishlist">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 21s-6.716-4.35-9.2-8.281C1.424 10.565 2.052 7.44 4.42 5.82c2.165-1.48 4.773-.915 6.58 1.2 1.807-2.115 4.416-2.68 6.58-1.2 2.368 1.62 2.996 4.745 1.62 6.9C18.716 16.65 12 21 12 21z"/>
+            </svg>
+            <span class="icon-badge" data-wishlist-count></span>
+          </a>
+          <a class="icon-link" href="cart.html" aria-label="Cart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="9" cy="20" r="1.5"></circle>
+              <circle cx="17" cy="20" r="1.5"></circle>
+              <path d="M3 4h2l2.4 10.2a1 1 0 0 0 .98.8H18.2a1 1 0 0 0 .98-.8L21 7H7"></path>
+            </svg>
+            <span class="icon-badge" data-cart-count></span>
+          </a>
+          <button class="nav-toggle" data-nav-toggle aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
     </header>
 
-    <!-- Main Content -->
-    <main id="mainContent">
-      <!-- Hero Section -->
+    <main>
       <section class="hero">
-        <div class="container hero-content">
-          <div class="hero-text">
-            <h1>Gear Up. Game On.</h1>
-            <p>
-              Welcome to <strong>PlayPro Sports Store</strong> – your one-stop
-              shop for premium sports equipment, apparel, and accessories.
+        <span class="glow glow-1"></span>
+        <span class="glow glow-2"></span>
+        <div class="container hero-grid">
+          <div class="reveal">
+            <p class="section-kicker">Elite Sports Equipment</p>
+            <h1 class="hero-title">
+              Train Hard.<br />
+              Compete <span class="text-gradient">Harder.</span>
+            </h1>
+            <p class="hero-subtitle">
+              Build your game with pro-grade football, basketball, running, and
+              training gear. PlayPro Sports delivers premium equipment engineered
+              for performance and durability.
             </p>
-            <a href="#featured" class="btn btn-primary">Shop Now</a>
+            <div class="hero-cta">
+              <a href="shop.html" class="btn btn-primary">Shop Collection</a>
+              <a href="experience.html" class="btn btn-secondary">Explore X Lab</a>
+              <a href="about.html" class="btn btn-secondary">Our Story</a>
+              <span class="chip">24-hour dispatch on in-stock gear</span>
+            </div>
+            <div class="hero-meta">
+              <article class="meta-tile">
+                <p class="meta-value" data-counter="1200" data-suffix="+">0+</p>
+                <p class="meta-label">Products Curated</p>
+              </article>
+              <article class="meta-tile">
+                <p class="meta-value" data-counter="98" data-suffix="%">0%</p>
+                <p class="meta-label">5-Star Store Rating</p>
+              </article>
+              <article class="meta-tile">
+                <p class="meta-value" data-counter="42" data-suffix="k">0k</p>
+                <p class="meta-label">Athletes Supported</p>
+              </article>
+            </div>
           </div>
 
-          <div class="hero-image">
-            <div class="hero-card">
-              <h2>Season Highlights</h2>
-              <p>
-                Exclusive deals on football, basketball, and fitness gear.
-              </p>
+          <div class="hero-media reveal">
+            <img
+              src="https://images.pexels.com/photos/1884574/pexels-photo-1884574.jpeg?auto=compress&cs=tinysrgb&w=1600"
+              alt="Athlete training in a modern stadium"
+            />
+            <div class="hero-stack">
+              <article class="hero-chip">
+                <strong>Performance Drops Every Week</strong>
+                <span>Fresh pro-level releases in football and basketball.</span>
+              </article>
+              <article class="hero-chip">
+                <strong>Built for real play</strong>
+                <span>Field-tested by academy coaches and athletes.</span>
+              </article>
+              <div class="hero-static-grid">
+                <article class="spotlight-card">
+                  <img
+                    src="https://images.pexels.com/photos/1752757/pexels-photo-1752757.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="Basketball"
+                  />
+                  <div>
+                    <small>Hot Right Now</small>
+                    <strong>Street King Basketball</strong>
+                  </div>
+                </article>
+                <article class="spotlight-card">
+                  <img
+                    src="https://images.pexels.com/photos/6077791/pexels-photo-6077791.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="Football boots"
+                  />
+                  <div>
+                    <small>Top Rated</small>
+                    <strong>Velocity Studs Pro</strong>
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
         </div>
+
+        <div class="container stats-band">
+          <article class="stats-card reveal">
+            <span class="value" data-counter="38" data-suffix="ms">0ms</span>
+            <span class="label">Avg Support Response</span>
+          </article>
+          <article class="stats-card reveal">
+            <span class="value" data-counter="150">0</span>
+            <span class="label">Cities Delivered Daily</span>
+          </article>
+          <article class="stats-card reveal">
+            <span class="value" data-counter="365">0</span>
+            <span class="label">Days Performance Guarantee</span>
+          </article>
+          <article class="stats-card reveal">
+            <span class="value" data-counter="30" data-suffix="+">0+</span>
+            <span class="label">Partner Academies</span>
+          </article>
+        </div>
       </section>
 
-      <!-- Featured Products -->
-      <section class="section" id="featured">
+      <section class="marquee-wrap">
+        <div class="marquee">
+          <span>football essentials</span>
+          <span>basketball elite drops</span>
+          <span>team training kits</span>
+          <span>running performance gear</span>
+          <span>recovery tools</span>
+          <span>free shipping over $180</span>
+          <span>football essentials</span>
+          <span>basketball elite drops</span>
+          <span>team training kits</span>
+          <span>running performance gear</span>
+          <span>recovery tools</span>
+          <span>free shipping over $180</span>
+        </div>
+      </section>
+
+      <section class="section">
         <div class="container">
-          <div class="section-header">
-            <h2>Featured Products</h2>
-            <p>
-              Handpicked gear to elevate your performance on and off the field.
+          <header class="section-header centered reveal">
+            <p class="section-kicker">Shop by Sport</p>
+            <h2 class="section-title">Everything Your Training Demands</h2>
+            <p class="section-copy">
+              From match-day gear to high-performance training systems, find
+              category-focused equipment crafted for serious athletes.
             </p>
+          </header>
+          <div class="category-grid" id="homeCategoryGrid"></div>
+        </div>
+      </section>
+
+      <section class="section-tight">
+        <div class="container feature-strip">
+          <article class="feature-item reveal">
+            <h3>Game-Ready Quality</h3>
+            <p>
+              Every product is selected for durability, comfort, and competition
+              level performance.
+            </p>
+          </article>
+          <article class="feature-item reveal">
+            <h3>Fast Dispatch</h3>
+            <p>
+              Same-day processing for high-priority orders and real-time tracking
+              from dispatch to delivery.
+            </p>
+          </article>
+          <article class="feature-item reveal">
+            <h3>Coach-Curated Picks</h3>
+            <p>
+              Product choices are reviewed by coaches and experienced athletes,
+              not generic marketplace feeds.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <header class="section-header centered reveal">
+            <p class="section-kicker">Featured Founder Spotlight</p>
+            <h2 class="section-title">From Left On Seen to Locked In</h2>
+            <p class="section-copy">
+              The mindset story behind PlayPro&rsquo;s relentless execution and founder-led momentum.
+            </p>
+          </header>
+
+          <article class="founder-card reveal">
+            <img
+              src="images/deon-menezes-founder.jpeg"
+              alt="Deon Menezes founder portrait"
+              loading="lazy"
+            />
+            <div>
+              <p class="section-kicker">Founder Spotlight</p>
+              <h3>Deon Menezes</h3>
+              <div class="founder-spotlight-copy">
+                <p class="founder-spotlight-line founder-spotlight-lead">
+                  After collecting more &ldquo;let&rsquo;s just be friends&rdquo; than gym memberships, Deon Menezes did what any Indian guy with a broken heart and full ego would do:
+                </p>
+                <p class="founder-spotlight-line founder-spotlight-turn">
+                  He stopped chasing &ldquo;seen at 2:14 AM&rdquo; and started building something that actually replies.
+                </p>
+                <p class="founder-spotlight-line">
+                  While his chats were stuck on double-tick archaeology, his ambition went full IPL powerplay.
+                </p>
+                <p class="founder-spotlight-line">
+                  Every &ldquo;you&rsquo;re such a nice guy&rdquo; became one more late night, one more plan, one more comeback.
+                </p>
+                <p class="founder-spotlight-line">
+                  At some point, heartbreak stopped being pain and became fuel: chai-powered, ego-driven, and dangerously consistent.
+                </p>
+                <p class="founder-spotlight-line">
+                  He didn&rsquo;t get closure, so he built momentum.
+                </p>
+                <p class="founder-spotlight-line">
+                  He didn&rsquo;t get a &ldquo;yes,&rdquo; so he built results.
+                </p>
+                <p class="founder-spotlight-line">
+                  Now the only thing ghosting him is free time.
+                </p>
+                <p class="founder-spotlight-line founder-spotlight-finale">
+                  From left on seen to locked in, Deon&rsquo;s character arc is pure cinema.
+                </p>
+              </div>
+              <div class="founder-actions">
+                <a class="btn btn-secondary" href="about.html">View About Story</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="section-kicker">Featured Gear</p>
+            <h2 class="section-title split-title">Top Rated Storefront Drops</h2>
+            <p class="section-copy">
+              High-demand equipment trusted by teams, academies, and individual
+              athletes across multiple sports.
+            </p>
+          </header>
+          <div class="product-grid" id="featuredGrid"></div>
+        </div>
+      </section>
+
+      <section class="section-tight">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="section-kicker">Live Drops</p>
+            <h2 class="section-title">Countdown To The Next Elite Releases</h2>
+            <p class="section-copy">
+              The launch timer below simulates high-demand release windows for
+              PlayPro X Lab product drops.
+            </p>
+          </header>
+          <div class="metric-strip">
+            <article class="kpi-card reveal">
+              <p class="kpi-label">Velocity Studs 2.0</p>
+              <p class="kpi-value" data-countdown-target="2026-03-12T18:00:00Z">--:--:--</p>
+            </article>
+            <article class="kpi-card reveal">
+              <p class="kpi-label">Rimfire Elite Pro</p>
+              <p class="kpi-value" data-countdown-target="2026-03-22T15:30:00Z">--:--:--</p>
+            </article>
+            <article class="kpi-card reveal">
+              <p class="kpi-label">Recovery Alpha Set</p>
+              <p class="kpi-value" data-countdown-target="2026-04-02T20:00:00Z">--:--:--</p>
+            </article>
           </div>
+        </div>
+      </section>
 
-          <div class="product-grid">
+      <section class="section-tight">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="section-kicker">Community Proof</p>
+            <h2 class="section-title">Athlete Voices & Team Results</h2>
+          </header>
+          <div class="experience-grid">
+            <article class="experience-card reveal">
+              <h3>Coach Aaron, Football Academy</h3>
+              <p>
+                \"We switched our full squad to PlayPro gear and reduced
+                replacement costs while improving session quality.\"
+              </p>
+            </article>
+            <article class="experience-card reveal">
+              <h3>Maya, National Basketball Prospect</h3>
+              <p>
+                \"The grip, cushioning, and support upgrades made a measurable
+                difference in my weekly training load.\"
+              </p>
+            </article>
+            <article class="experience-card reveal">
+              <h3>UGC Challenge #PlayProKit</h3>
+              <p>
+                Over 6,400 setups shared by athletes. Join the challenge and
+                unlock community rewards.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-  <!-- PlayPro Elite Football -->
-  <article class="product-card">
-    <a
-      href="images/elite-football.svg"
-      target="_blank"
-      class="product-image-wrapper"
-    >
-      <img
-        src="images/elite-football.svg"
-        alt="PlayPro Elite Football"
-        class="product-image"
-      />
-    </a>
+      <section class="section-tight">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="section-kicker">PlayPro OS</p>
+            <h2 class="section-title">Platform, Growth, and Enterprise Layers</h2>
+            <p class="section-copy">
+              Explore analytics, admin systems, founder content, VIP drops, live commerce, and team spotlight hubs.
+            </p>
+          </header>
+          <div class="experience-grid">
+            <a class="experience-card reveal" href="dashboard.html"><h3>Dashboard</h3><p>Personal recommendations and progress insights.</p></a>
+            <a class="experience-card reveal" href="analytics.html"><h3>Analytics</h3><p>Funnel tracking, search analytics, and experimentation.</p></a>
+            <a class="experience-card reveal" href="admin.html"><h3>Admin Console</h3><p>Operational control, risk logs, and configuration.</p></a>
+            <a class="experience-card reveal" href="live.html"><h3>Live Shopping</h3><p>Countdown events with instant-buy moments.</p></a>
+            <a class="experience-card reveal" href="queue.html"><h3>Drop Queue</h3><p>Limited drop wait room and launch fairness flow.</p></a>
+            <a class="experience-card reveal" href="vip.html"><h3>VIP Access</h3><p>Member-only pages and early release windows.</p></a>
+            <a class="experience-card reveal" href="blog.html"><h3>Founder Blog</h3><p>Product curation insights by Deon Menezes.</p></a>
+            <a class="experience-card reveal" href="spotlight.html"><h3>Team Spotlights</h3><p>Academy storefronts and shared kit boards.</p></a>
+          </div>
+        </div>
+      </section>
 
-    <div class="product-body">
-      <h3>PlayPro Elite Football</h3>
-      <p class="product-price">₹59.99</p>
-      <p class="product-copy">
-        Professional match football designed for control, durability, and performance.
-      </p>
-
-      <button
-        class="btn btn-outline add-to-cart-btn"
-        data-product="PlayPro Elite Football"
-        data-price="59.99"
-        data-category="Football"
-      >
-        Add to Cart
-      </button>
-    </div>
-  </article>
-
-  <!-- PlayPro Hoops Basketball -->
-  <article class="product-card">
-    <a
-      href="images/hoops-basketball.svg"
-      target="_blank"
-      class="product-image-wrapper"
-    >
-      <img
-        src="images/hoops-basketball.svg"
-        alt="PlayPro Hoops Basketball"
-        class="product-image"
-      />
-    </a>
-
-    <div class="product-body">
-      <h3>PlayPro Hoops Basketball</h3>
-      <p class="product-price">₹64.99</p>
-      <p class="product-copy">
-        Indoor and outdoor basketball with excellent grip and consistent bounce.
-      </p>
-
-      <button
-        class="btn btn-outline add-to-cart-btn"
-        data-product="PlayPro Hoops Basketball"
-        data-price="64.99"
-        data-category="Basketball"
-      >
-        Add to Cart
-      </button>
-    </div>
-  </article>
-
-  <!-- Training Football -->
-  <article class="product-card">
-    <a
-      href="images/elite-football.svg"
-      target="_blank"
-      class="product-image-wrapper"
-    >
-      <img
-        src="images/elite-football.svg"
-        alt="PlayPro Training Football"
-        class="product-image"
-      />
-    </a>
-
-    <div class="product-body">
-      <h3>PlayPro Training Football</h3>
-      <p class="product-price">₹39.99</p>
-      <p class="product-copy">
-        Lightweight football ideal for daily training and beginner practice.
-      </p>
-
-      <button
-        class="btn btn-outline add-to-cart-btn"
-        data-product="PlayPro Training Football"
-        data-price="39.99"
-        data-category="Football"
-      >
-        Add to Cart
-      </button>
-    </div>
-  </article>
-
-  <!-- Street Basketball -->
-  <article class="product-card">
-    <a
-      href="images/hoops-basketball.svg"
-      target="_blank"
-      class="product-image-wrapper"
-    >
-      <img
-        src="images/hoops-basketball.svg"
-        alt="PlayPro Street Basketball"
-        class="product-image"
-      />
-    </a>
-
-    <div class="product-body">
-      <h3>PlayPro Street Basketball</h3>
-      <p class="product-price">₹49.99</p>
-      <p class="product-copy">
-        Durable rubber basketball built for outdoor courts and street play.
-      </p>
-
-      <button
-        class="btn btn-outline add-to-cart-btn"
-        data-product="PlayPro Street Basketball"
-        data-price="49.99"
-        data-category="Basketball"
-      >
-        Add to Cart
-      </button>
-    </div>
-  </article>
-
-</div>
-
+      <section class="section">
+        <div class="container newsletter reveal">
+          <p class="section-kicker">Insider Access</p>
+          <h2 class="section-title">Get Launch Alerts and Flash Deals</h2>
+          <p class="section-copy">
+            Join the PlayPro inner circle to get first access to new drops,
+            athlete bundles, and seasonal markdowns.
+          </p>
+          <form class="newsletter-form" data-newsletter-form>
+            <input
+              type="email"
+              placeholder="Enter your email for updates"
+              aria-label="Email address"
+              required
+            />
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+          </form>
+        </div>
       </section>
     </main>
 
-    <!-- Footer -->
     <footer class="site-footer">
-      <div class="container footer-content">
-        <p>
-          &copy; <span id="year"></span> PlayPro Sports Store.
-          All rights reserved.
-        </p>
-
-        <div class="footer-social">
-          <a href="#" aria-label="PlayPro on Facebook">Facebook</a>
-          <a href="#" aria-label="PlayPro on Instagram">Instagram</a>
-          <a href="#" aria-label="PlayPro on Twitter">Twitter</a>
+      <div class="container footer-main">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"
+            ><span class="logo-accent">Play</span>Pro Sports</a
+          >
+          <p>
+            Premium sports equipment for athletes who train with intent and
+            compete with purpose.
+          </p>
+          <p class="founder-note">Created and founded by Deon Menezes.</p>
         </div>
+
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html">All Products</a></li>
+            <li><a href="shop.html?category=Football">Football</a></li>
+            <li><a href="shop.html?category=Basketball">Basketball</a></li>
+            <li><a href="shop.html?category=Training">Training</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About PlayPro</a></li>
+            <li><a href="experience.html">PlayPro X Lab</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="analytics.html">Analytics</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="wishlist.html">Wishlist</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="checkout.html">Checkout</a></li>
+            <li><a href="returns.html">Shipping & Returns</a></li>
+            <li><a href="team-orders.html">Bulk Orders</a></li>
+            <li><a href="track-order.html">Track Order</a></li>
+            <li><a href="live.html">Live Shopping</a></li>
+            <li><a href="vip.html">VIP Access</a></li>
+            <li><a href="contact.html">Help Center</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span>&copy; <span data-year></span> PlayPro Sports Store. All rights reserved.</span>
+        <span>Built for athletes. Designed by Team PlayPro.</span>
       </div>
     </footer>
 
     <script src="js/script.js"></script>
   </body>
 </html>
-

@@ -4,162 +4,273 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PlayPro Sports Store | About</title>
+    <title>About PlayPro Sports | Founded by Deon Menezes</title>
+    <meta
+      name="description"
+      content="Learn about PlayPro Sports, the founder Deon Menezes, and the mission to build elite multi-sport equipment experiences."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="theme-color" content="#ff6a3d" />
+    <meta property="og:site_name" content="PlayPro Sports" />
+    <meta property="og:type" content="website" />
   </head>
+  <body data-page="about">
+    <div class="topbar">
+      <div class="container topbar-content">
+        <span>PlayPro Sports was built to elevate athletes at every level.</span>
+        <span class="topbar-highlight">Founder: Deon Menezes</span>
+      </div>
+    </div>
 
-  <body>
-    <!-- Header / Navigation -->
     <header class="site-header">
       <div class="container nav-container">
-        <div class="logo">
-          <span class="logo-accent">Play</span>Pro
-        </div>
+        <a href="index.html" class="logo" aria-label="PlayPro Sports Home"
+          ><span class="logo-accent">Play</span>Pro Sports</a
+        >
 
-        <nav class="main-nav" id="mainNav">
-          <a href="index.html" class="nav-link">Home</a>
-          <a
-            href="about.html"
-            class="nav-link active"
-            aria-current="page"
-            >About</a
+        <nav class="main-nav" data-main-nav>
+          <a class="nav-link" data-page-link="home" href="index.html">Home</a>
+          <a class="nav-link" data-page-link="shop" href="shop.html">Shop</a>
+          <a class="nav-link" data-page-link="experience" href="experience.html">Experience</a>
+          <a class="nav-link" data-page-link="about" href="about.html">About</a>
+          <a class="nav-link" data-page-link="contact" href="contact.html"
+            >Contact</a
           >
-          <a href="contact.html" class="nav-link">Contact</a>
-          <a href="cart.html" class="nav-link cart-link">
-            Cart
-            <span class="cart-count-badge" id="cartCountHeader"></span>
-          </a>
         </nav>
 
-        <button
-          class="nav-toggle"
-          id="navToggle"
-          aria-label="Toggle navigation"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <div class="nav-actions">
+          <form class="site-search" data-site-search role="search" aria-label="Search products">
+            <input type="search" data-site-search-input placeholder="Search gear" aria-label="Search products">
+            <button type="submit" aria-label="Search catalog">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="M20 20l-3.4-3.4"></path>
+              </svg>
+            </button>
+          </form>
+          <button class="icon-link theme-toggle" data-theme-toggle type="button" aria-label="Switch theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2.5M12 19.5V22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M2 12h2.5M19.5 12H22M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77"></path>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M20.2 14.7A8.5 8.5 0 1 1 9.3 3.8a7 7 0 1 0 10.9 10.9z"></path>
+            </svg>
+          </button>
+          <a class="icon-link" href="wishlist.html" aria-label="Wishlist">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 21s-6.716-4.35-9.2-8.281C1.424 10.565 2.052 7.44 4.42 5.82c2.165-1.48 4.773-.915 6.58 1.2 1.807-2.115 4.416-2.68 6.58-1.2 2.368 1.62 2.996 4.745 1.62 6.9C18.716 16.65 12 21 12 21z"/>
+            </svg>
+            <span class="icon-badge" data-wishlist-count></span>
+          </a>
+          <a class="icon-link" href="cart.html" aria-label="Cart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="9" cy="20" r="1.5"></circle>
+              <circle cx="17" cy="20" r="1.5"></circle>
+              <path d="M3 4h2l2.4 10.2a1 1 0 0 0 .98.8H18.2a1 1 0 0 0 .98-.8L21 7H7"></path>
+            </svg>
+            <span class="icon-badge" data-cart-count></span>
+          </a>
+          <button class="nav-toggle" data-nav-toggle aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
     </header>
 
-    <!-- Main Content -->
-    <main id="mainContent">
-      <!-- About Intro -->
-      <section class="section section-alt">
-        <div class="container narrow">
-          <h1>About PlayPro Sports Store</h1>
-          <p>
-            PlayPro Sports Store is built for athletes, teams, and sports
-            enthusiasts who demand performance-driven gear. From grassroots
-            training to professional competition, we curate high-quality
-            equipment that helps you play at your best.
-          </p>
-        </div>
-      </section>
-
-      <!-- Mission & Vision -->
-      <section class="section">
-        <div class="container split">
-          <div>
-            <h2>Our Mission</h2>
+    <main class="section-tight">
+      <div class="container">
+        <section class="page-hero reveal">
+          <img
+            src="https://images.pexels.com/photos/1884574/pexels-photo-1884574.jpeg?auto=compress&cs=tinysrgb&w=1900"
+            alt="Athletes training together"
+          />
+          <div class="page-hero-body">
+            <div class="breadcrumbs">
+              <a href="index.html">Home</a>
+              <span>/</span>
+              <strong>About</strong>
+            </div>
+            <h1>Built for Serious Athletes</h1>
             <p>
-              To empower every athlete with reliable, professional-grade sports
-              equipment that combines innovation, comfort, and style at a fair
-              price.
-            </p>
-            <ul class="bullet-list">
-              <li>Curated, tested, and athlete-approved gear.</li>
-              <li>Transparent pricing with seasonal offers.</li>
-              <li>Customer-first service and support.</li>
-            </ul>
-          </div>
-
-          <div>
-            <h2>Our Vision</h2>
-            <p>
-              To become the most trusted online destination for multi-sport
-              athletes, connecting communities through a shared passion for the
-              game.
-            </p>
-            <ul class="bullet-list">
-              <li>Expanding into more team and individual sports.</li>
-              <li>Supporting local clubs and training academies.</li>
-              <li>Championing active, healthy lifestyles.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Equipment Categories -->
-      <section class="section section-alt">
-        <div class="container">
-          <div class="section-header">
-            <h2>Sports Equipment Categories</h2>
-            <p>
-              Explore our growing collection of equipment designed for
-              performance, comfort, and durability.
+              PlayPro Sports exists to close the gap between premium equipment
+              and everyday athletes chasing elite performance.
             </p>
           </div>
+        </section>
 
-          <div class="category-grid">
-            <article class="category-card">
-              <h3>Football &amp; Futsal</h3>
-              <p>Balls, boots, goalkeeper gloves, training cones, and kits.</p>
-            </article>
+        <section class="story-grid">
+          <article class="story-media reveal">
+            <img
+              src="https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg?auto=compress&cs=tinysrgb&w=1400"
+              alt="Sports equipment preparation"
+            />
+          </article>
+          <article class="story-card reveal">
+            <p class="section-kicker">Our Philosophy</p>
+            <h2>Performance Before Hype</h2>
+            <p>
+              We built PlayPro with a clear idea: athletes should never settle for
+              weak gear that breaks under pressure. Every product in our catalog is
+              chosen for durability, function, and real training outcomes.
+            </p>
+            <p style="margin-top: 0.75rem">
+              From football pitches to basketball courts to endurance tracks, our
+              goal is to deliver equipment that feels like an unfair advantage.
+            </p>
+          </article>
+        </section>
 
-            <article class="category-card">
-              <h3>Basketball</h3>
+        <section class="section">
+          <article class="founder-card reveal">
+            <img
+              src="images/deon-menezes-founder.jpeg"
+              alt="Founder portrait"
+            />
+            <div>
+              <p class="section-kicker">Founder Spotlight</p>
+              <h3>Deon Menezes</h3>
+              <div class="founder-spotlight-copy">
+                <p class="founder-spotlight-line founder-spotlight-lead">
+                  After collecting more &ldquo;let&rsquo;s just be friends&rdquo; than gym memberships, Deon Menezes did what any Indian guy with a broken heart and full ego would do:
+                </p>
+                <p class="founder-spotlight-line founder-spotlight-turn">
+                  He stopped chasing &ldquo;seen at 2:14 AM&rdquo; and started building something that actually replies.
+                </p>
+                <p class="founder-spotlight-line">
+                  While his chats were stuck on double-tick archaeology, his ambition went full IPL powerplay.
+                </p>
+                <p class="founder-spotlight-line">
+                  Every &ldquo;you&rsquo;re such a nice guy&rdquo; became one more late night, one more plan, one more comeback.
+                </p>
+                <p class="founder-spotlight-line">
+                  At some point, heartbreak stopped being pain and became fuel: chai-powered, ego-driven, and dangerously consistent.
+                </p>
+                <p class="founder-spotlight-line">
+                  He didn&rsquo;t get closure, so he built momentum.
+                </p>
+                <p class="founder-spotlight-line">
+                  He didn&rsquo;t get a &ldquo;yes,&rdquo; so he built results.
+                </p>
+                <p class="founder-spotlight-line">
+                  Now the only thing ghosting him is free time.
+                </p>
+                <p class="founder-spotlight-line founder-spotlight-finale">
+                  From left on seen to locked in, Deon&rsquo;s character arc is pure cinema.
+                </p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="section-tight">
+          <header class="section-header reveal">
+            <p class="section-kicker">Milestones</p>
+            <h2 class="section-title">PlayPro Growth Journey</h2>
+            <p class="section-copy">
+              A focused roadmap driven by athlete outcomes, product quality, and
+              relentless UX improvement.
+            </p>
+          </header>
+
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <p class="timeline-year">2022</p>
               <p>
-                Indoor/outdoor balls, hoops, compression wear, and sneakers.
+                PlayPro launched with a small high-performance football and
+                basketball collection for academy athletes.
               </p>
             </article>
-
-            <article class="category-card">
-              <h3>Cricket</h3>
+            <article class="timeline-item reveal">
+              <p class="timeline-year">2024</p>
               <p>
-                Bats, balls, pads, helmets, gloves, and practice nets.
+                Expanded into running, strength, and recovery gear with a
+                technology-backed product review process.
               </p>
             </article>
-
-            <article class="category-card">
-              <h3>Fitness &amp; Training</h3>
+            <article class="timeline-item reveal">
+              <p class="timeline-year">2026</p>
               <p>
-                Mats, dumbbells, resistance bands, and recovery tools.
-              </p>
-            </article>
-
-            <article class="category-card">
-              <h3>Running &amp; Outdoor</h3>
-              <p>
-                Shoes, hydration gear, apparel, and safety accessories.
-              </p>
-            </article>
-
-            <article class="category-card">
-              <h3>Accessories</h3>
-              <p>
-                Bags, caps, socks, arm sleeves, and protective gear.
+                Rebuilt into a premium digital storefront with advanced shopping,
+                cart intelligence, and checkout UX.
               </p>
             </article>
           </div>
-        </div>
-      </section>
+        </section>
+
+        <section class="section">
+          <div class="newsletter reveal">
+            <p class="section-kicker">Join the Movement</p>
+            <h2 class="section-title">Train Smarter with PlayPro</h2>
+            <p class="section-copy">
+              Get curated product recommendations and early access to pro-level
+              drops built for modern athletes.
+            </p>
+            <form class="newsletter-form" data-newsletter-form>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                aria-label="Email address"
+                required
+              />
+              <button class="btn btn-primary" type="submit">Join Now</button>
+            </form>
+          </div>
+        </section>
+      </div>
     </main>
 
-    <!-- Footer -->
     <footer class="site-footer">
-      <div class="container footer-content">
-        <p>
-          &copy; <span id="year"></span> PlayPro Sports Store.
-          All rights reserved.
-        </p>
-
-        <div class="footer-social">
-          <a href="#" aria-label="PlayPro on Facebook">Facebook</a>
-          <a href="#" aria-label="PlayPro on Instagram">Instagram</a>
-          <a href="#" aria-label="PlayPro on Twitter">Twitter</a>
+      <div class="container footer-main">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"
+            ><span class="logo-accent">Play</span>Pro Sports</a
+          >
+          <p>High-impact, athlete-first sports equipment across multiple domains.</p>
+          <p class="founder-note">Created and founded by Deon Menezes.</p>
         </div>
+
+        <div class="footer-col">
+          <h4>Store</h4>
+          <ul class="footer-links">
+            <li><a href="shop.html">Shop All</a></li>
+            <li><a href="wishlist.html">Wishlist</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Support</a></li>
+            <li><a href="contact.html">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Help</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Shipping</a></li>
+            <li><a href="contact.html">Returns</a></li>
+            <li><a href="contact.html">Bulk Orders</a></li>
+            <li><a href="contact.html">FAQs</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span>&copy; <span data-year></span> PlayPro Sports Store. All rights reserved.</span>
+        <span>Purpose-built gear for people who play to win.</span>
       </div>
     </footer>
 
