@@ -1,5 +1,5 @@
-const CACHE_NAME = "playpro-v8-cache";
-const IMAGE_CACHE = "playpro-images-v6";
+const CACHE_NAME = "playpro-v9-cache";
+const IMAGE_CACHE = "playpro-images-v7";
 const CORE_ASSETS = [
   "/",
   "/index.html",
@@ -37,7 +37,7 @@ const CORE_ASSETS = [
   "/js/script.js",
   "/images/elite-football.svg",
   "/images/hoops-basketball.svg",
-  "/images/deon-menezes-founder.jpeg",
+  "/images/founder-photo.jpeg",
   "/manifest.webmanifest"
 ];
 
